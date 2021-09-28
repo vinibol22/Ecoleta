@@ -7,7 +7,11 @@ import { AppComponent } from './app.component';
 import { RodapeComponent } from './rodape/rodape.component';
 
 import { MenuComponent } from './menu/menu.component';
+
 import { InicioComponent } from './inicio/inicio.component';
+import { EntrarComponent } from './entrar/entrar.component';
+import { CadastrarComponent } from './cadastrar/cadastrar.component';
+
 
 
 @NgModule({
@@ -17,7 +21,12 @@ import { InicioComponent } from './inicio/inicio.component';
     RodapeComponent,
 
     MenuComponent,
-      InicioComponent
+
+      InicioComponent,
+
+      EntrarComponent,
+      CadastrarComponent
+
   ],
   imports: [
     BrowserModule,
