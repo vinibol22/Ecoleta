@@ -13,9 +13,9 @@ import { MenuComponent } from './menu/menu.component';
   declarations: [
     AppComponent,
 
-    RodapeComponent
+    RodapeComponent,
 
-    MenuComponent
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
