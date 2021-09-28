@@ -8,3 +8,6 @@ ul.p-30 li{
     display: inline;
     margin:0 1em 0 0;
 }
+#footer{
+    background:rgb(77, 253, 183);
+}
