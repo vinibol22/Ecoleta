@@ -27,6 +27,9 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
       EntrarComponent,
       CadastrarComponent
 
+=======
+
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
