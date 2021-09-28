@@ -7,15 +7,17 @@ import { AppComponent } from './app.component';
 import { RodapeComponent } from './rodape/rodape.component';
 
 import { MenuComponent } from './menu/menu.component';
+import { InicioComponent } from './inicio/inicio.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
 
-    RodapeComponent
+    RodapeComponent,
 
-    MenuComponent
+    MenuComponent,
+      InicioComponent
   ],
   imports: [
     BrowserModule,

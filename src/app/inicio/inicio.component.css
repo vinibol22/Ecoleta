@@ -1,0 +1,16 @@
+.cor-jubotron{
+    background-color: white;
+    border-radius: 4%;
+}
+.body{
+   background-color: hsl(110, 66%, 94%)
+}
+.btn-criado{
+    width:25%;
+    background-color:rgb(77, 253, 183);
+    border: white;
+}
+.card{
+  
+   min-height: 20rem;
+}
