@@ -17,11 +17,9 @@
   
 }
 
-.retangulo{
-    height:2rem;
-    
+.separacao{
+    height: 1rem;
 }
-
 
 .card-cinza{
 
@@ -39,8 +37,9 @@
 
 .card11{ 
     background:white;
-    height: 9rem;
+ 
     border-radius: 15px;
+
 }
 .foto{
     border-radius: 50px;
@@ -50,6 +49,7 @@
 i{
     font-size:1.5rem;
     display: flex;
+    margin-top:1.3rem ;
 }
 
 .box-dos-icons{
@@ -83,3 +83,5 @@ i{
   
     width: 10rem;  
 }
+
+   
