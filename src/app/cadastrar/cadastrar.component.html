@@ -7,7 +7,7 @@
         <div class="col-md-6" id="img-bg">  </div>
             <!-- Essa col será para as 6 colunas do lado direito -->
             <div class="col-md-6 mt-5 mb-5"> 
-                <!--  Aqui vou centralizar todo o conteúdo, vai utilziar apenas 6 colunas, e por ser pouco, o meu conteúdo será jogado para esquerda de forma automatica. Por isso vou colocar o d-flex -->
+                <!--  Aqui vou centralizar todo o conteúdo, vai utilizar apenas 6 colunas, e por ser pouco, o meu conteúdo será jogado para esquerda de forma automatica. Por isso vou colocar o d-flex -->
                 <div class="row d-flex justify-content-center"> 
                     <div class="col-md-10">
                         <h1 class="text-center">Cadastro</h1>
@@ -18,9 +18,49 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="usuario">Usuário</label>
+                            <label for="usuario">Usuário Novo</label>
                             <input class="form-control" type="text" name="usuario" id="usuario" placeholder="Seu usuário"> 
                         </div>
+
+<!-- Novo -->
+                        <div class="form-group">
+                            <label for="sobrenome">Sobrenome</label>
+                            <input class="form-control" type="text" name="Sobrenome" id="Sobrenome" placeholder="Seu Sobrenome"> 
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="cep">Cep</label>
+                            <input class="form-control" type="text" name="Cep" id="Cep" placeholder="Seu Cep"> 
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="endereço">Endereço</label>
+                            <input class="form-control" type="text" name="Endereço" id="Endereço" placeholder="Seu Endereço"> 
+                        </div>
+
+                        <!-- um do lado do outro-->
+                        <div class="form-group">
+                            <label for="estado">Estado</label>
+                            <input class="form-control" type="text" name="Estado" id="Estado" placeholder="Seu Estado"> 
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="cidade">Cidade</label>
+                            <input class="form-control" type="text" name="Cidade" id="Cidade" placeholder="Seu Cidade"> 
+                        </div>
+                        <!--/um do lado do outro-->
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input class="form-control" type="text" name="Eimail" id="E-mail" placeholder="Seu E-mail"> 
+                        </div>
+
+<!--/Novo -->
+
+                    
 
                         <div class="form-group">
                             <label for="foto">Link da Foto</label>
@@ -50,7 +90,7 @@
                         <div class="d-flex justify-content-center">
                             <button type="submit" class="btn  btn-danger mr-4" routerLink='/entrar'>Cancelar</button>
                             <button type="submit" class="btn btn-success " >Cadastrar</button>
-                            <!-- Os meus botões ficam grudados, pq?  -->
+                            <!-- -->
                         </div>
                     </div>
                 </div>
