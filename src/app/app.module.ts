@@ -3,16 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RodapeComponent } from './rodape/rodape.component';
+import { SuporteComponent } from './suporte/suporte.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RodapeComponent
+    SuporteComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
