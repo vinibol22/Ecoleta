@@ -1,16 +1,85 @@
-.cor-jubotron{
-    background-color: white;
-    border-radius: 4%;
-}
+
 .body{
-   background-color: hsl(110, 66%, 94%)
+   background-color: hsl(110, 66%, 94%);
+   height: 100%;
 }
-.btn-criado{
-    width:25%;
-    background-color:rgb(77, 253, 183);
-    border: white;
-}
+
 .card{
   
    min-height: 20rem;
+}
+@media(max-width:1500px){
+
+}
+
+.card{
+    width: 100%;
+  
+}
+
+.retangulo{
+    height:2rem;
+    
+}
+
+
+.card-cinza{
+
+    border-radius: 15px;
+    min-height:3rem;
+    border: solid 1px hsl(110, 66%, 94%); ;
+    width: 80%;
+}
+.centralizar-card{
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card11{ 
+    background:white;
+    height: 9rem;
+    border-radius: 15px;
+}
+.foto{
+    border-radius: 50px;
+    margin-top:1rem;    
+    margin-left: 1rem;
+}
+i{
+    font-size:1.5rem;
+    display: flex;
+}
+
+.box-dos-icons{
+    margin-top:1rem
+} p{
+    margin-top: 1.2rem;
+    font-size: 0.7rem;
+}
+
+.separacao-boxs{
+    height:3%
+}
+.postagens-amigos{
+    width: 100%;
+    background:white;
+    border-radius: 15px
+
+}
+.nome-amigo{
+    margin-top:0.3rem;
+   
+    font-family:bold;
+}
+.imagem-amigo{
+    width: 100%;  
+     margin-left:15rem;
+}
+.cotainer-imagem-amigo{
+    display: flex;
+    justify-content: center;
+  
+    width: 10rem;  
 }

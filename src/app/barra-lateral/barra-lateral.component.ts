@@ -9,7 +9,7 @@ export class BarraLateralComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(){
   }
 
 }
