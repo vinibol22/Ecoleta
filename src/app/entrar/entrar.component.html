@@ -10,6 +10,7 @@
             <div class="row d-flex justify-content-center"> <!--Tudo que estiver dentro dessa row, eu vou querer centralizado.-->
                 <div class="col-md-6 col-xs-6 ">
                     
+
                     <h1 class="text-center mb-3">Sejam bem vindos(as) !</h1>
                         <!-- Todo código que estiver com um asteristico representa o código da caixa que o usuario precisa digitar seu nome. E ela precisa estar dentro desse <h1>-->
                         
@@ -24,6 +25,24 @@
                                 <div class="d-flex justify-content-center">
                                     <button type="submit " class="btn btn-success col-xs-4 col-sm-6">Cadastre-se</button>
                                 </div>
+
+
+                    <h1 class="text-center mb-3">Entrar</h1>
+                        <!-- Todo código que estiver com um asteristico representa o código da caixa que o usuario precisa digitar se nome. E ela precisa estar dentro desse <h1>-->
+                        <div class="form-group"><!-- * -->
+                            <label for="usuario">Usuário </label><!-- * -->
+                            <input  [(ngModel)]="usuarioLogin.usuario"  class="form-control" type="text" name="usuario" id="usuario" placeholder="Seu usuário"> <!-- * -->
+                        </div>
+
+                        <div class="form-group">
+                            <label for="senha">Senha</label>
+                            <input [(ngModel)]="usuarioLogin.senha"  class="form-control" type="password" name="senha" id="senha" placeholder="Sua senha">
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="btn btn-success" (click)="entrar()">Entrar</button>
+                        </div>
+
+                        <hr class="mt-5 mb-5">
 
 
                     
