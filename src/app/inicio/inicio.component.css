@@ -47,9 +47,9 @@
     margin-left: 1rem;
 }
 i{
-    font-size:1.5rem;
+    font-size:2.1rem;
     display: flex;
-    margin-top:1.3rem ;
+    margin-top:0.2rem ;
 }
 
 .box-dos-icons{
@@ -84,4 +84,11 @@ i{
     width: 10rem;  
 }
 
-   
+   a {
+    background:rgb(77, 253, 183);
+    color: white;
+    border: white;
+   }
+   .card-cinza{
+       height: 1rem;
+   }

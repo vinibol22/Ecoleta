@@ -38,8 +38,8 @@
           
           <div class="row">
             <div class="col-1">
-              <img class="foto" src="https://avatars.githubusercontent.com/u/63822714?v=4" alt="" width="50px" height="50px">
-            </div>
+              <img class="foto" src="{{foto}}
+           " alt="" width="50px" height="50px"> </div>
             <div class="col-11">
           <div class="card-body "> 
             <div class="centralizar-card">
@@ -59,10 +59,11 @@
           
           
               <div class="separacao"></div>
-           
-              <button class="btn btn-success mr-2" data-toggle="modal" data-target="#novaPostagem"> 
-                <p>Escrever postagem</p></button>
-              <a class="btn btn-outline-success" href="#postagens">Ver Postagens</a>
+                
+         
+                <a class="btn btn-outline-success mr-2" href="#postagens" data-toggle="modal" data-target="#novaPostagem">Postar</a>
+          
+            <!--<a class="btn btn-outline-success" href="#postagens">Ver Postagens</a>-->  
           
           
           
@@ -85,22 +86,39 @@
         
       <!--Seg-->
 
-  <div class="row ">
+  <div class="row" *ngFor="let item of listaPostagens">
   <div class="col-7 ">  
     <div class="postagens-amigos">
        
       <div class="row">
-        <div class="col-1"><img src="https://avatars.githubusercontent.com/u/63822714?v=4" alt="" width="40px" class="foto"></div>
+        <div class="col-1"><img src="{{item.usuario.foto }}" alt="" width="40px" class="foto"></div>
         <div class="col-10 nome-amigo">  
             <div class="row">
-              <div class="col-md-1"></div> <p> Nome do amigo</p>
+              <div class="col-md-1 d-flex justify-content-center align-content-center"></div> <p>{{item.usuario.nome}}</p>
             </div>
+        
+            <div class="d-flex justify-content-center">
+<p>{{ item.texto }}</p>
+
+
+</div>
+                <div class="d-flex justify-content-center">
+             
+                  
+           
          
-       <div class="texto-post d-flex justify-content-center align-items-center">
-         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde, molestias obcaecati! Eaque distinctio perspiciatis, beatae inventore quia reprehenderit accusantium consequatur temporibus optio laborum magni veniam rerum quae consequuntur nostrum unde!</p>
-       </div>
+    
+
+       
+          <small class="text-muted">
+          {{ item.data | date: "dd/MM/yyyy" }} às
+          {{ item.data | date: "HH:mm" }}
+        </small>
+       
+      
+     </div>
        <div class="cotainer-imagem-amigo">
-       <img class="imagem-amigo d-flex justify-content-center" src="https://st2.depositphotos.com/3357017/5329/v/600/depositphotos_53294829-stock-illustration-ecology-concept-vector.jpg" alt="">
+       <img class="imagem-amigo d-flex justify-content-center" src="" alt="">
       </div>
       </div>
     </div>
@@ -147,6 +165,7 @@
                   aria-controls="nav-minhasPostagens"
                   aria-selected="false"
                   (click)="findUserById()"
+                  routerLink="/minhaspostagens"
                   >Minhas Postagens</a
                 >
           

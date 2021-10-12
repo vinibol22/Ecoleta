@@ -1,6 +1,6 @@
+import { Component, OnInit } from '@angular/core';
 import { AuthService } from './../service/auth.service';
 import { Usuario } from './../model/Usuario';
-import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 // importações do tema
@@ -10,11 +10,11 @@ import { Postagem } from '../model/Postagem';
 import { PostagemService } from '../service/postagem.service';
 
 @Component({
-  selector: 'app-inicio',
-  templateUrl: './inicio.component.html',
-  styleUrls: ['./inicio.component.css']
+  selector: 'app-minhas-postagens',
+  templateUrl: './minhas-postagens.component.html',
+  styleUrls: ['./minhas-postagens.component.css']
 })
-export class InicioComponent implements OnInit {
+export class MinhasPostagensComponent implements OnInit {
  
   listaTemas: Tema[];
   idTema: number;
@@ -89,3 +89,5 @@ export class InicioComponent implements OnInit {
       });
   }
 }
+
+

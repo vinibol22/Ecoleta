@@ -9,21 +9,23 @@
 .barra{
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+    min-height: 9rem;
+    height:100%;
+        background:white;
+}
+li:hover{
+        color: blue;
 }
 i{
     font-size: 2.2rem;
     padding-right: 1rem;
-    color: white;
+    color:rgb(77, 253, 183);
 }
 a{
     font-size: 1.3rem;
-   color: white;
+    color:rgb(77, 253, 183)
 }
-.barra{
-    height:100%;
-   background:rgb(77, 253, 183);
- 
-}
+
 li{
     padding-top: 2.0rem;
 }
@@ -51,9 +53,7 @@ li{
         }  
         @media(max-width:600px){
            
-           .barra{
-            width: 4rem;
-           }
+        
             }
         
     }
