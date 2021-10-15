@@ -41,6 +41,14 @@ export class PostagemService {
   deletePostagem(id: number){
     return this.http.delete(`https://ecoletagen.herokuapp.com/postagens/${id}`, this.token)
   }
- 
+
+  putCurtir(id : number):Observable<Postagem>{
+    return this.http.put<Postagem>(`https://ecoletagen.herokuapp.com/postagens/curtir/${id}`,this.token)
+  }
+
+  putDescurtir(id : number){
+    return this.http.put<Postagem>(`https://ecoletagen.herokuapp.com/postagens/descurtir/${id}`,this.token)
+  }
+//  tem que passa o this.token nas curtidas
 }
 

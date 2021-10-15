@@ -92,3 +92,11 @@ i{
    .card-cinza{
        height: 1rem;
    }
+   .texto-postagem{
+    font-size: 5rem;
+   }
+
+   .quadrado3{
+       width: 9rem;
+       background-color:purple;
+   }

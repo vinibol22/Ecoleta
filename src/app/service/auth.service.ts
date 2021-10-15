@@ -51,7 +51,21 @@ export class AuthService {
     if (environment.token != '') {
       ok = true;
     }
+   
 
     return ok;
   }
+  admin(){
+    let ok: boolean = false;
+
+    if (environment.tipo == 'adm') {
+      ok = true;
+    }
+
+    return ok;
+  }
+
+  putUsuario(usuario: Usuario): Observable<Usuario>{
+    return this.http.put<Usuario>('https://ecoletagen.herokuapp.com/usuarios/alterar',usuario)
+}
 }

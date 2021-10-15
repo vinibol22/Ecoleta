@@ -20,7 +20,8 @@ import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component'
 import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
-import { MinhasPostagensComponent } from './minhas-postagens/minhas-postagens.component';
+import { MypostsComponent } from './myposts/myposts.component';
+  
 
 
 
@@ -39,7 +40,8 @@ import { MinhasPostagensComponent } from './minhas-postagens/minhas-postagens.co
     TemaEditComponent,
     PostagemDeleteComponent,
     PostagemEditComponent,
-    MinhasPostagensComponent,
+    MypostsComponent,
+   
   ],
   imports: [
     BrowserModule,

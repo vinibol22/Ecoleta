@@ -1,21 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from './../service/auth.service';
-import { Usuario } from './../model/Usuario';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
-// importações do tema
-import { TemaService } from './../service/tema.service';
-import { Tema } from '../model/Tema';
 import { Postagem } from '../model/Postagem';
+import { Tema } from '../model/Tema';
+import { Usuario } from '../model/Usuario';
+import { AuthService } from '../service/auth.service';
 import { PostagemService } from '../service/postagem.service';
+import { TemaService } from '../service/tema.service';
 
 @Component({
-  selector: 'app-minhas-postagens',
-  templateUrl: './minhas-postagens.component.html',
-  styleUrls: ['./minhas-postagens.component.css']
+  selector: 'app-myposts',
+  templateUrl: './myposts.component.html',
+  styleUrls: ['./myposts.component.css']
 })
-export class MinhasPostagensComponent implements OnInit {
- 
+export class MypostsComponent implements OnInit {
   listaTemas: Tema[];
   idTema: number;
   tema: Tema = new Tema();
@@ -23,11 +21,13 @@ export class MinhasPostagensComponent implements OnInit {
   //!variaveis para o usuário
   idUser = environment.id;
   foto= environment.foto
+  nome=environment.nome;
   usuario: Usuario = new Usuario();
 
   //? variaveis para a postagem
   postagem: Postagem = new Postagem();
   listaPostagens: Postagem[];
+  minhasPostagens:Postagem[];
  
 
   constructor(
@@ -42,10 +42,13 @@ export class MinhasPostagensComponent implements OnInit {
       this.router.navigate(['/inicio']);
     }
 
+
+
     this.auth.refreshToken();
     
     this.getAllTemas();
     this.getAllPostagens();
+    this.findUserById()
   }
 
   getAllTemas() {
@@ -65,6 +68,7 @@ export class MinhasPostagensComponent implements OnInit {
       this.usuario = resp;
     });
   }
+  
 
   getAllPostagens() {
     this.postagemService.getAllPostagens().subscribe((resp: Postagem[]) => {
@@ -89,5 +93,3 @@ export class MinhasPostagensComponent implements OnInit {
       });
   }
 }
-
-

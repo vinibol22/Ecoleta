@@ -26,20 +26,21 @@ export class InicioComponent implements OnInit {
   usuario: Usuario = new Usuario();
 
   //? variaveis para a postagem
+ 
   postagem: Postagem = new Postagem();
   listaPostagens: Postagem[];
- 
+  idPostagem : Postagem = new Postagem();
 
   constructor(
     private router: Router,
     private temaService: TemaService,
-    private auth: AuthService,
+    public auth: AuthService,
     private postagemService: PostagemService
   ) {}
 
   ngOnInit() {
     if (environment.token == '') {
-      this.router.navigate(['/inicio']);
+      this.router.navigate(['/entrar']);
     }
 
     this.auth.refreshToken();
@@ -88,4 +89,24 @@ export class InicioComponent implements OnInit {
         this.getAllPostagens();
       });
   }
+
+  getPostagemById(id : number){
+    this.postagemService.getByIdPostagem(id).subscribe((resp: Postagem)=>{
+      this.idPostagem = resp;
+    })
+  }
+
+  curtida(id : number){
+    this.postagemService.putCurtir(id).subscribe(()=>{
+        this.getAllPostagens()
+    })
+  }
+  descurtida(id : number){
+    this.postagemService.putDescurtir(id).subscribe(()=>{
+      this.getAllPostagens()
+  })
+
+
+
+}
 }
