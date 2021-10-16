@@ -26,6 +26,8 @@ import { MypostsComponent } from './myposts/myposts.component';
 import { BarraLateralDireitaComponent } from './barra-lateral-direita/barra-lateral-direita.component';
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
 import { AlertasComponent } from './alertas/alertas.component';
+import { SuporteComponent } from './suporte/suporte.component';
+import { EventosComponent } from './eventos/eventos.component';
 
 
 
@@ -48,6 +50,8 @@ import { AlertasComponent } from './alertas/alertas.component';
     BarraLateralDireitaComponent,
     UsuarioEditComponent,
     AlertasComponent,
+    SuporteComponent,
+    EventosComponent,
    
    
   ],

@@ -10,6 +10,8 @@ import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.compon
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 import{MypostsComponent} from './myposts/myposts.component';
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
+import { EventosComponent } from './eventos/eventos.component';
+import { SuporteComponent } from './suporte/suporte.component';
 
 
 const routes: Routes = [
@@ -38,6 +40,14 @@ const routes: Routes = [
   },{
     path:"usuario-edit",component:UsuarioEditComponent
   },
+  {
+    path:"eventos",component:EventosComponent
+  },
+  {
+    path:"suporte",component:SuporteComponent
+  },
+
+
 
 
   

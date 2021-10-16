@@ -85,9 +85,7 @@ export class InicioComponent implements OnInit {
     this.usuario.id = this.idUser;
     this.postagem.usuario = this.usuario;
 
-    this.postagemService
-      .postPostagem(this.postagem)
-      .subscribe((resp: Postagem) => {
+    this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
         this.postagem = resp;
        this.alertas.showAlertSuccess('Postagem realizada com sucesso');
         this.postagem = new Postagem();
