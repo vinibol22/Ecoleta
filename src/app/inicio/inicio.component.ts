@@ -8,6 +8,8 @@ import { TemaService } from './../service/tema.service';
 import { Tema } from '../model/Tema';
 import { Postagem } from '../model/Postagem';
 import { PostagemService } from '../service/postagem.service';
+import { AlertasService } from '../service/alertas.service';
+
 
 @Component({
   selector: 'app-inicio',
@@ -31,14 +33,18 @@ export class InicioComponent implements OnInit {
   listaPostagens: Postagem[];
   idPostagem : Postagem = new Postagem();
 
+  key = 'data'
+  reverse = true
   constructor(
     private router: Router,
     private temaService: TemaService,
     public auth: AuthService,
-    private postagemService: PostagemService
+    private postagemService: PostagemService,
+    private alertas: AlertasService
   ) {}
 
   ngOnInit() {
+    window.scroll(0,0)
     if (environment.token == '') {
       this.router.navigate(['/entrar']);
     }
@@ -84,7 +90,7 @@ export class InicioComponent implements OnInit {
       .postPostagem(this.postagem)
       .subscribe((resp: Postagem) => {
         this.postagem = resp;
-        alert('Postagem realizada com sucesso');
+       this.alertas.showAlertSuccess('Postagem realizada com sucesso');
         this.postagem = new Postagem();
         this.getAllPostagens();
       });

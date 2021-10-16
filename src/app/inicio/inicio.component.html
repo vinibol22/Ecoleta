@@ -66,18 +66,28 @@
       
                 </div>
                 </div> 
+                 </div>   
+                  
+                
                  </div>
-                 </div>
-                 </div> 
+
+                  <div class="col-5">
+                    <app-barra-lateral-direita></app-barra-lateral-direita>
+                  </div>
+
+                 </div>  
+                
               <div class="separacao-boxs"></div>
-     
-     
+    
     
         
-      <!--Seg-->
+      <!--Seg-->  
+     
       <!--Todas as postagens-->
 
-  <div class="row" *ngFor="let item of listaPostagens">
+  <div class="row" 
+  *ngFor="let item of listaPostagens | orderBy : key : reverse 
+  ">
   <div class="col-7 ">  
     <div class="postagens-amigos">
        
@@ -128,18 +138,17 @@
     </div>  <!--fim das colunas-->
   
 
-  
+
 
   </div><!--Fim de todas as postagens-->
-    
+  
 
-
-
+  
  
 </div>
 
 
-          </div>
+          </div>  
 
 
 

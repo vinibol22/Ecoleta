@@ -65,7 +65,7 @@ export class AuthService {
     return ok;
   }
 
-  putUsuario(usuario: Usuario): Observable<Usuario>{
-    return this.http.put<Usuario>('https://ecoletagen.herokuapp.com/usuarios/alterar',usuario)
+  putUsuario(usuario:Usuario): Observable<Usuario>{
+    return this.http.put<Usuario>('https://ecoletagen.herokuapp.com/usuarios/alterar',usuario,this.token)
 }
 }

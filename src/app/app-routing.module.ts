@@ -8,7 +8,8 @@ import {InicioComponent } from './inicio/inicio.component';
 import { TemaComponent } from './tema/tema.component';
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
-import{MypostsComponent} from './myposts/myposts.component'
+import{MypostsComponent} from './myposts/myposts.component';
+import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
 
 
 const routes: Routes = [
@@ -34,7 +35,10 @@ const routes: Routes = [
     path:"postagem-delete/:id", component: PostagemDeleteComponent
   },{
     path:"myposts",component:MypostsComponent
+  },{
+    path:"usuario-edit",component:UsuarioEditComponent
   },
+
 
   
 ]

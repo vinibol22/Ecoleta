@@ -43,7 +43,7 @@
             <div class="postagens-amigos">
                
               <div class="row">
-                <div class="col-1"><img src="{{foto }}" alt="" width="40px" class="foto"></div>
+                <div class="col-1"><img src="{{foto}}" alt="" width="40px" class="foto"></div>
                 <div class="col-10 nome-amigo">  
                     <div class="row">
                       <div class="col-md-1 d-flex justify-content-center align-content-center"></div> <p>{{nome}}</p>
@@ -63,7 +63,17 @@
                   {{ item.data | date: "HH:mm" }}
                 </small>
                
-              
+                <a
+                [routerLink]="['/postagem-edit', item.id]"
+                class="btn btn-outline-dark mr-3"
+                >Editar</a
+              >
+              <a
+                [routerLink]="['/postagem-delete', item.id]"
+                class="btn btn-outline-danger"
+                >Apagar</a
+              >
+
              </div>
                <div class="cotainer-imagem-amigo">
                <img class="imagem-amigo d-flex justify-content-center" src="" alt="">
@@ -86,7 +96,9 @@
 
 
 
-</div></div>
+</div>
+
+</div>
 </div>
  
           <div class="container mb-5 mt-5" id="postagens">
