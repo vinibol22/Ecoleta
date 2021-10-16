@@ -10,12 +10,12 @@ import { AuthService } from '../service/auth.service';
   styleUrls: ['./entrar.component.css']
 })
 export class EntrarComponent implements OnInit {
-
+usuarioLogin:UsuarioLogin=new UsuarioLogin();
   constructor(
     private auth:AuthService,
     private router:Router
   ) { }
-  usuarioLogin:UsuarioLogin=new UsuarioLogin();
+  
   ngOnInit(){
     window.scroll(0,0)
   }
@@ -33,7 +33,7 @@ entrar(){
     this.usuarioLogin.foto;
     this.router.navigate(['/inicio'])
 },erro=>{
-  if(erro.status==500){
+  if(erro.status==401){
     alert('Usuário ou senha estão incorretos!')
   }
 })

@@ -33,8 +33,7 @@
           
           <div class="row">
             <div class="col-1">
-              <img class="foto" src="{{foto}}
-           " alt="" width="50px" height="50px"> </div>
+              <img class="foto" src="{{foto}}" alt="" width="50px" height="50px"> </div>
             <div class="col-11">
           <div class="card-body "> 
             <div class="centralizar-card">
@@ -85,14 +84,13 @@
      
       <!--Todas as postagens-->
 
-  <div class="row" 
-  *ngFor="let item of listaPostagens | orderBy : key : reverse 
-  ">
-  <div class="col-7 ">  
+  <!-- <div class="row" *ngFor="let item of listaPostagens | orderBy : key : reverse "> -->
+    <div class="row" *ngFor="let item of listaPostagens">
+    <div class="col-7 ">  
     <div class="postagens-amigos">
        
       <div class="row">
-        <div class="col-1"><img src="{{item.usuario.foto }}" alt="" width="40px" class="foto"></div>
+        <div class="col-1"><img src="{{item.usuario.foto}}" alt="" width="40px" class="foto"></div>
         <div class="col-10 nome-amigo">  
             <div class="row">
               <div class="col-md-1 d-flex justify-content-center align-content-center"></div> 
@@ -100,7 +98,7 @@
               </div>
         
             <div class="d-flex justify-content-center align-content-center texto-postagem">
-            <p>{{ item.texto }}</p>
+            <p>{{item.texto}}</p>
             </div>
 
 
@@ -113,14 +111,14 @@
           {{ item.data | date: "HH:mm" }}
         </small>
        
-          <p class="card-text">
-              <small class="text-muted">
+           <p class="card-text">
+              <!-- <small class="text-muted">
                 <button class="btn" (click)='this.getPostagemById(item.id)' (click)='this.curtida(item.id)'><i class="far fa-thumbs-up"></i>
                 </button>
                 Curtidas :{{item.curtidos}}
                 <button class="btn" ><i class="fa fa-thumbs-down"></i></button>
-              </small>
-          </p>
+              </small> -->
+          </p> 
      </div> 
        <div class="cotainer-imagem-amigo">
          

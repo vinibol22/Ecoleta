@@ -23,8 +23,8 @@ export class InicioComponent implements OnInit {
   tema: Tema = new Tema();
 
   //!variaveis para o usuário
-  idUser = environment.id;
-  foto= environment.foto
+  idUser=environment.id;
+  foto=environment.foto
   usuario: Usuario = new Usuario();
 
   //? variaveis para a postagem
@@ -33,8 +33,8 @@ export class InicioComponent implements OnInit {
   listaPostagens: Postagem[];
   idPostagem : Postagem = new Postagem();
 
-  key = 'data'
-  reverse = true
+  // key = 'data'
+  // reverse = true
   constructor(
     private router: Router,
     private temaService: TemaService,
@@ -44,7 +44,6 @@ export class InicioComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    window.scroll(0,0)
     if (environment.token == '') {
       this.router.navigate(['/entrar']);
     }
@@ -85,7 +84,7 @@ export class InicioComponent implements OnInit {
 
     this.usuario.id = this.idUser;
     this.postagem.usuario = this.usuario;
-    console.log(this.postagem)
+
     this.postagemService
       .postPostagem(this.postagem)
       .subscribe((resp: Postagem) => {
@@ -97,7 +96,7 @@ export class InicioComponent implements OnInit {
   }
 
   getPostagemById(id : number){
-    this.postagemService.getByIdPostagem(id).subscribe((resp: Postagem)=>{
+    this.postagemService.getByIdPostagem(id).subscribe((resp:Postagem)=>{
       this.idPostagem = resp;
     })
   }

@@ -35,22 +35,22 @@ export class PostagemService {
   }
 
   postPostagem(postagem: Postagem): Observable<Postagem>{
-    return this.http.post<Postagem>('https://ecoletagen.herokuapp.com/postagens', postagem, this.token)
+    return this.http.post<Postagem>('https://ecoletagen.herokuapp.com/postagens',postagem,this.token)
   }
 
   putPostagem(postagem: Postagem): Observable<Postagem>{
-    return this.http.put<Postagem>('https://ecoletagen.herokuapp.com/postagens', postagem, this.token)
+    return this.http.put<Postagem>('https://ecoletagen.herokuapp.com/postagens',postagem,this.token)
   }
 
   deletePostagem(id: number){
-    return this.http.delete(`https://ecoletagen.herokuapp.com/postagens/${id}`, this.token)
+    return this.http.delete(`https://ecoletagen.herokuapp.com/postagens/${id}`,this.token)
   }
 
   putCurtir(id : number):Observable<Postagem>{
     return this.http.put<Postagem>(`https://ecoletagen.herokuapp.com/postagens/curtir/${id}`,this.token)
   }
 
-  putDescurtir(id : number){
+  putDescurtir(id : number):Observable<Postagem>{
     return this.http.put<Postagem>(`https://ecoletagen.herokuapp.com/postagens/descurtir/${id}`,this.token)
   }
 //  tem que passa o this.token nas curtidas

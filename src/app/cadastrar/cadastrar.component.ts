@@ -37,7 +37,7 @@ oEmail:string;
     this.oEmail = event.target.value;
   }
   cadastrarUsuario(){
-   if(this.usuario.foto==''){
+   if(this.usuario.foto=='' || this.usuario.foto == null){
      this.usuario.foto = 'assets/img/foflagem.jpg'
    }
     this.usuario.tipo = this.tipoUser;  
