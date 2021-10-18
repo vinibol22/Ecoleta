@@ -1,12 +1,16 @@
-#img-fluid{
-    background-image: url(../../assets/img/latadelixo.svg);
+#img-bg{
+    background-image: url(../../app/entrar/fundopng2.jpg);
 
-    min-height: 900px;
+    min-height: 1200px; /* tamanho exato da tela  */
+    padding: auto;
+    height: 0%;
+    
+
 
     background-attachment: absolute; /* background-position(define como e onde a imagem de fundo é posicionada) */
-                        /* absolute - (Permite o posicionamento do elemento em qualquer lugar da página, nesse caso da imagem.) */
-    background-repeat: no-repeat; /* background-repeat(Estabelece se uma imagem de plano de fundo será repetida ou não.) */
-    background-size: size;
+                        /* absolute - (Permite o posicionamento do elemento em qualquer lugar da página, nesse caso daimagem.) */
+  /*  background-repeat: no-repeat; /* background-repeat(Estabelece se uma imagem de plano de fundo será repetida ou não.) */
+   background-size: cover; 
 }
 
 
@@ -14,6 +18,13 @@
 .text-corescura{
     color: #696969;
 }   
+
+#position{
+    position: relative;
+    left: 70px;
+    height: 10%;
+    }
+    
 
 
 
