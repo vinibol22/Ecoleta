@@ -1,0 +1,23 @@
+.fs-16{
+    font-size: 16pt;
+}
+
+a{
+    cursor: pointer;
+}
+
+ .container-fluid justify-content-center{
+ 
+width: 100px;
+height: 100px;
+padding: 2px;
+                                
+}
+
+.box{
+    padding: 2px;
+}
+
+.card{
+    margin: 10px;
+}

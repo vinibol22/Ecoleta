@@ -20,6 +20,8 @@ import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component'
 import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
+import { EventosComponent } from './eventos/eventos.component';
+import { SuporteComponent } from './suporte/suporte.component';
 
 
 
@@ -38,6 +40,8 @@ import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.compon
     TemaEditComponent,
     PostagemDeleteComponent,
     PostagemEditComponent,
+    EventosComponent,
+    SuporteComponent,
   ],
   imports: [
     BrowserModule,
