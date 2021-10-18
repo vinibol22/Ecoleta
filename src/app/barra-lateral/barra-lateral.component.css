@@ -10,8 +10,9 @@
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     min-height: 9rem;
-    height:100%;
-        background:white;
+    height:36rem;
+        background:#123417;
+
 }
 li:hover{
         color: blue;
@@ -19,15 +20,15 @@ li:hover{
 i{
     font-size: 2.2rem;
     padding-right: 1rem;
-    color:rgb(77, 253, 183);
+    color:white;
 }
 a{
     font-size: 1.3rem;
-    color:rgb(77, 253, 183)
+    color:white;
 }
 
 li{
-    padding-top: 2.0rem;
+    padding-top:25%;
 }
 @media(max-width:1280px){
     a {

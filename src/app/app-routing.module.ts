@@ -12,6 +12,7 @@ import{MypostsComponent} from './myposts/myposts.component';
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
 import { EventosComponent } from './eventos/eventos.component';
 import { SuporteComponent } from './suporte/suporte.component';
+import { TipoPostagensComponent } from './tipo-postagens/tipo-postagens.component';
 
 
 const routes: Routes = [
@@ -46,6 +47,10 @@ const routes: Routes = [
   {
     path:"suporte",component:SuporteComponent
   },
+  {
+    path:"tipo-postagens",component:TipoPostagensComponent
+  },
+
 
 
 

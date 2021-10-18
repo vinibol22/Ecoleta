@@ -21,6 +21,7 @@ export class InicioComponent implements OnInit {
   listaTemas: Tema[];
   idTema: number;
   tema: Tema = new Tema();
+  descricaoTema : string;
 
   //!variaveis para o usuário
   idUser=environment.id;
@@ -33,8 +34,11 @@ export class InicioComponent implements OnInit {
   listaPostagens: Postagem[];
   idPostagem : Postagem = new Postagem();
 
-  // key = 'data'
-  // reverse = true
+  tituloPost : string
+
+
+   key = 'data'
+   reverse = true
   constructor(
     private router: Router,
     private temaService: TemaService,
@@ -45,7 +49,7 @@ export class InicioComponent implements OnInit {
 
   ngOnInit() {
     if (environment.token == '') {
-      this.router.navigate(['/entrar']);
+      this.router.navigate(['/inicio']);
     }
 
     this.auth.refreshToken();
@@ -111,5 +115,26 @@ export class InicioComponent implements OnInit {
 
 
 
+}
+
+findByTituloPostagem(){
+  if(this.tituloPost == ''){
+    this.getAllPostagens();
+  }else{
+     this.postagemService.getByTituloPostagem(this.tituloPost).subscribe((resp:Postagem[])=>{
+    this.listaPostagens=resp
+  })
+  }
+ 
+}
+findByDescricaoTema(){
+  if(this.descricaoTema == ''){
+    this.getAllTemas();
+  }else{
+     this.temaService.getByDescricaoTema(this.descricaoTema).subscribe((resp:Tema[])=>{
+    this.listaTemas=resp
+})
+
+}
 }
 }

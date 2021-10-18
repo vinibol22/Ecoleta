@@ -38,7 +38,7 @@ oEmail:string;
   }
   cadastrarUsuario(){
    if(this.usuario.foto=='' || this.usuario.foto == null){
-     this.usuario.foto = 'assets/img/foflagem.jpg'
+     this.usuario.foto = 'assets/img/anonimo.jpeg'
    }
     this.usuario.tipo = this.tipoUser;  
     if(this.usuario.senha != this.confirmarSenha){

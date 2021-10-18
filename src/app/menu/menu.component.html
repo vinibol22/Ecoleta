@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -19,14 +19,15 @@
       </li>
     </ul>
 
-    <ul class="navbar-nav ml-auto d-flex align-items-center">
-      <li class="nav-item pl-3">
-          <a class="m-0 font-weight-bold text-white fs-16">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a>
-          <!-- AQUI PODERIA SER A FOTO DO USUARIO, ficaria no canto direto da pagina.-->
-          <li class="nav-item active">
+    <ul class="navbar-nav ml-auto d-flex align-items-center">    
+      <li class="nav-item active">
             <img src="{{foto}}" alt="Perfil user" 
             width="75px" height="75px" class="img-fluid rounded-circle">
           </li>
+      <li class="nav-item pl-3">
+          <a (click)='sair()'class="m-0 font-weight-bold text-white fs-16"> <i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
+          <!-- AQUI PODERIA SER A FOTO DO USUARIO, ficaria no canto direto da pagina.-->
+      
           <!-- /AQUI PODERIA SER A FOTO DO USUARIO-->
     </ul>
 

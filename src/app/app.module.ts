@@ -28,6 +28,7 @@ import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component
 import { AlertasComponent } from './alertas/alertas.component';
 import { SuporteComponent } from './suporte/suporte.component';
 import { EventosComponent } from './eventos/eventos.component';
+import { TipoPostagensComponent } from './tipo-postagens/tipo-postagens.component';
 
 
 
@@ -52,6 +53,7 @@ import { EventosComponent } from './eventos/eventos.component';
     AlertasComponent,
     SuporteComponent,
     EventosComponent,
+    TipoPostagensComponent,
    
    
   ],

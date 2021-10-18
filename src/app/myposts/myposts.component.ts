@@ -30,6 +30,12 @@ export class MypostsComponent implements OnInit {
   minhasPostagens:Postagem[];
  
 
+  
+  tituloPost : string
+
+  key = 'data'
+  reverse = true
+  idPostagem : Postagem = new Postagem();
   constructor(
     private router: Router,
     private temaService: TemaService,
@@ -91,5 +97,28 @@ export class MypostsComponent implements OnInit {
         this.postagem = new Postagem();
         this.getAllPostagens();
       });
+  }
+
+  curtida(id : number){
+    this.postagemService.putCurtir(id).subscribe(()=>{
+        this.getAllPostagens()
+    })
+  }
+
+  getPostagemById(id : number){
+    this.postagemService.getByIdPostagem(id).subscribe((resp:Postagem)=>{
+      this.idPostagem = resp;
+    })
+  }
+
+  findByTituloPostagem(){
+    if(this.tituloPost == ''){
+      this.getAllPostagens();
+    }else{
+       this.postagemService.getByTituloPostagem(this.tituloPost).subscribe((resp:Postagem[])=>{
+      this.listaPostagens=resp
+    })
+    }
+   
   }
 }
