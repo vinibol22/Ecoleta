@@ -30,17 +30,37 @@ export class PostagemService {
     return this.http.get<Postagem>(`https://ecoletagen.herokuapp.com/postagens/${id}`, this.token)
   }
 
+  getByTituloPostagem(titulo:string): Observable<Postagem[]>{
+    return this.http.get<Postagem[]>(`https://ecoletagen.herokuapp.com/postagens/titulo/${titulo}`,this.token)
+  }
+
   postPostagem(postagem: Postagem): Observable<Postagem>{
-    return this.http.post<Postagem>('https://ecoletagen.herokuapp.com/postagens', postagem, this.token)
+    return this.http.post<Postagem>('https://ecoletagen.herokuapp.com/postagens',postagem,this.token)
   }
 
   putPostagem(postagem: Postagem): Observable<Postagem>{
-    return this.http.put<Postagem>('https://ecoletagen.herokuapp.com/postagens', postagem, this.token)
+    return this.http.put<Postagem>('https://ecoletagen.herokuapp.com/postagens',postagem,this.token)
   }
 
   deletePostagem(id: number){
-    return this.http.delete(`https://ecoletagen.herokuapp.com/postagens/${id}`, this.token)
+    return this.http.delete(`https://ecoletagen.herokuapp.com/postagens/${id}`,this.token)
   }
- 
+
+  putCurtir(id : number):Observable<Postagem>{
+    return this.http.put<Postagem>(`https://ecoletagen.herokuapp.com/postagens/curtir/${id}`,this.token)
+  }
+
+  putDescurtir(id : number):Observable<Postagem>{
+    return this.http.put<Postagem>(`https://ecoletagen.herokuapp.com/postagens/descurtir/${id}`,this.token)
+  }
+  putMarcar(id : number):Observable<Postagem>{
+    return this.http.put<Postagem>(`https://ecoletagen.herokuapp.com/postagens/marcar/${id}`,this.token)
+  }
+
+  putDesmarcar(id : number):Observable<Postagem>{
+    return this.http.put<Postagem>(`https://ecoletagen.herokuapp.com/postagens/desmarcar/${id}`,this.token)
+  }
+
+//  tem que passa o this.token nas curtidas
 }
 

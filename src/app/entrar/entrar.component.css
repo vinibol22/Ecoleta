@@ -1,20 +1,42 @@
-#img-fluid{
-    background-image: url(../../assets/img/Recycling-rafiki.png);
+  
+#img-bg{
+    background-image: url(../../app/entrar/fundopng2.jpg);
 
-    min-height: 695px;
+    min-height: 1200px; /* tamanho exato da tela  */
+    padding: auto;
+    height: 0%;
+    
+
 
     background-attachment: absolute; /* background-position(define como e onde a imagem de fundo é posicionada) */
-                        /* absolute - (Permite o posicionamento do elemento em qualquer lugar da página, nesse caso da imagem.) */
-    background-repeat: no-repeat; /* background-repeat(Estabelece se uma imagem de plano de fundo será repetida ou não.) */
-    background-size: cover;
+                        /* absolute - (Permite o posicionamento do elemento em qualquer lugar da página, nesse caso daimagem.) */
+  /*  background-repeat: no-repeat; /* background-repeat(Estabelece se uma imagem de plano de fundo será repetida ou não.) */
+   background-size: cover; 
 }
+
+
+
+.text-corescura{
+    color: #696969;
+}   
+
+#position{
+    position: relative;
+    left: 70px;
+    height: 10%;
+    }
+    
+
+
+
+
+
 /* 
 position: absolute; 
 width: 141px;
 height: 40px;
 left: 108px;
 top: 581px;
-
 font-family: Roboto;
 font-style: normal;
 font-weight: normal;
@@ -23,7 +45,6 @@ line-height: 15px;
 display: flex;
 align-items: center;
 text-align: center;
-
 color: #000000; */
 
 

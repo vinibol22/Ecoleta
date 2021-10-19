@@ -8,6 +8,8 @@ import { TemaService } from './../service/tema.service';
 import { Tema } from '../model/Tema';
 import { Postagem } from '../model/Postagem';
 import { PostagemService } from '../service/postagem.service';
+import { AlertasService } from '../service/alertas.service';
+
 
 @Component({
   selector: 'app-inicio',
@@ -19,26 +21,35 @@ export class InicioComponent implements OnInit {
   listaTemas: Tema[];
   idTema: number;
   tema: Tema = new Tema();
+  descricaoTema : string;
 
   //!variaveis para o usuário
-  idUser = environment.id;
+  idUser=environment.id;
+  foto=environment.foto
   usuario: Usuario = new Usuario();
 
   //? variaveis para a postagem
+ 
   postagem: Postagem = new Postagem();
   listaPostagens: Postagem[];
- 
+  idPostagem : Postagem = new Postagem();
 
+  tituloPost : string
+
+
+   key = 'data'
+   reverse = true
   constructor(
     private router: Router,
     private temaService: TemaService,
-    private auth: AuthService,
-    private postagemService: PostagemService
+    public auth: AuthService,
+    private postagemService: PostagemService,
+    private alertas: AlertasService
   ) {}
 
   ngOnInit() {
     if (environment.token == '') {
-      this.router.navigate(['/entrar']);
+      this.router.navigate(['/inicio']);
     }
 
     this.auth.refreshToken();
@@ -77,14 +88,53 @@ export class InicioComponent implements OnInit {
 
     this.usuario.id = this.idUser;
     this.postagem.usuario = this.usuario;
-    console.log(this.postagem)
-    this.postagemService
-      .postPostagem(this.postagem)
-      .subscribe((resp: Postagem) => {
+
+    this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
         this.postagem = resp;
-        alert('Postagem realizada com sucesso');
+       this.alertas.showAlertSuccess('Postagem realizada com sucesso');
         this.postagem = new Postagem();
         this.getAllPostagens();
       });
   }
+
+  getPostagemById(id : number){
+    this.postagemService.getByIdPostagem(id).subscribe((resp:Postagem)=>{
+      this.idPostagem = resp;
+    })
+  }
+
+  curtida(id : number){
+    this.postagemService.putCurtir(id).subscribe(()=>{
+        this.getAllPostagens()
+    })
+  }
+  descurtida(id : number){
+    this.postagemService.putDescurtir(id).subscribe(()=>{
+      this.getAllPostagens()
+  })
+
+
+
+}
+
+findByTituloPostagem(){
+  if(this.tituloPost == ''){
+    this.getAllPostagens();
+  }else{
+     this.postagemService.getByTituloPostagem(this.tituloPost).subscribe((resp:Postagem[])=>{
+    this.listaPostagens=resp
+  })
+  }
+ 
+}
+findByDescricaoTema(){
+  if(this.descricaoTema == ''){
+    this.getAllTemas();
+  }else{
+     this.temaService.getByDescricaoTema(this.descricaoTema).subscribe((resp:Tema[])=>{
+    this.listaTemas=resp
+})
+
+}
+}
 }

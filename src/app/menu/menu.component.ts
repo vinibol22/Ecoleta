@@ -8,18 +8,24 @@ import { Router } from '@angular/router';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-  nome:string = environment.nome
-  foto:string = environment.foto
+  nome: string = environment.nome;
+  foto = environment.foto
+  id = environment.id
+
   constructor(private router: Router) { }
 
   ngOnInit(){
   }
+
   sair(){
     this.router.navigate(['/entrar'])
-    environment.token=''
-    environment.id=0
-    environment.foto=''
-    environment.tipo=''
-    environment.nome=''
+    environment.token = ''
+    environment.id = 0
+    environment.foto = ''
+    environment.tipo = ''
+    environment.nome = ''
+
   }
+
+
 }

@@ -1,5 +1,64 @@
+<nav class="navbar navbar-expand-lg">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+    <ul class="navbar-nav mr-auto d-flex align-items-center">
+      <li class="nav-item active">
+      <img src="../../assets/img/Ecoleta (2).svg" alt="Logo" 
+      width="75px" height="75px" class="img-fluid rounded-circle">
+      </li>
+
+      <li class="nav-item pl-3">
+        <p class="m-0 font-weight-bold text-white fs-16">{{nome}}</p> <!--estaca como nome do usuario-->
+      </li>
+
+      <li class="nav-item pl-3">
+          <a [routerLink]="['/usuario-edit',{id}]"><p class="m-0 font-weight-bold text-white fs-16"><i class="fa fa-pencil-square"></i></p> </a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto d-flex align-items-center">    
+      <li class="nav-item active">
+            <img src="{{foto}}" alt="Perfil user" 
+            width="75px" height="75px" class="img-fluid rounded-circle">
+          </li>
+      <li class="nav-item pl-3">
+          <a (click)='sair()'class="m-0 font-weight-bold text-white fs-16"> <i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
+          <!-- AQUI PODERIA SER A FOTO DO USUARIO, ficaria no canto direto da pagina.-->
+      
+          <!-- /AQUI PODERIA SER A FOTO DO USUARIO-->
+    </ul>
+
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -7,25 +66,25 @@
     <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
       <ul class="navbar-nav mr-auto d-flex align-items-center">
         <li class="nav-item active">
-         <img src="https://www.iconeasy.com/icon/png/Movie%20%26%20TV/Futurama%20Vol.%204%20-%20The%20Robots/Calculon.png" alt="Perfil user" 
+         <img src="{{foto}}" alt="Perfil user" 
          width="75px" height="75px" class="img-fluid rounded-circle">
         </li>
 
         <li class="nav-item pl-3">
-          <p class="m-0 font-weight-bold text-white fs-16">Nome do Usuário</p>
+          <p class="m-0 font-weight-bold text-white fs-16">Olá {{nome}}</p>
         </li>
 
         <li class="nav-item pl-3">
-            <a href=""><p class="m-0 font-weight-bold text-white fs-16"><i class="fa fa-pencil-square"></i></p> </a>
+            <a [routerLink]="['/usuario-edit',id]"><p class="m-0 font-weight-bold text-white fs-16"><i class="fa fa-pencil-square"></i></p> </a>
         </li>
       </ul>
 
       <ul class="navbar-nav ml-auto d-flex align-items-center">
         <li class="nav-item pl-3">
-            <a class="m-0 font-weight-bold text-white fs-16">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a>
+            <a class="m-0 font-weight-bold text-white fs-16">Sair <i class="fa fa-sign-out" aria-hidden="true"></i></a>
 
       </ul>
 
     </div>
   </nav>
-
+ -->

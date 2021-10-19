@@ -37,7 +37,9 @@ oEmail:string;
     this.oEmail = event.target.value;
   }
   cadastrarUsuario(){
-   
+   if(this.usuario.foto=='' || this.usuario.foto == null){
+     this.usuario.foto = 'assets/img/anonimo.jpeg'
+   }
     this.usuario.tipo = this.tipoUser;  
     if(this.usuario.senha != this.confirmarSenha){
         alert('senhas incorretas')
