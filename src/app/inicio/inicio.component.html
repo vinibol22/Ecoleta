@@ -77,7 +77,11 @@
                         <div class="col-1"></div>
                     </div> -->
                     <div class="row d-flex justify-content-center mt-5 mb-5 box-input">
-      
+     
+          <!-- <div *ngFor="let itemmm of listaTrends"> <p>{{itemmm.descricao}}</p></div>          -->
+       
+            
+
                       <div class="col-md-4 ">     
                         <div class="form-group d-flex justify-content-center  box-inputt">
                            <input type="text" class="form-control input"id="titulo" placeholder="Pesquise por título" [(ngModel)]='tituloPost' (keyup)='findByTituloPostagem()'>
@@ -88,6 +92,7 @@
               </div>
 
 
+                
 
 
 
@@ -124,6 +129,7 @@
  
   <div class="separar"></div>
   <div class="row"*ngFor="let item of listaPostagens | orderBy : key : reverse">  
+ 
 <!--  
     <div class="row" *ngFor="  let tema of listaTemas"></div>
     <div class="row" *ngFor="let itemm of tema.postagem "> </div> -->
@@ -411,6 +417,19 @@
                       [(ngModel)]="postagem.texto"
                     ></textarea>
                   </div>
+
+                  <div class="form-group">
+                    <label for="texto">localidade</label>
+                    <textarea
+                      class="form-control"
+                      name="texto"
+                      id="texto"
+                      rows="3"
+                      [(ngModel)]="postagem.localidade"
+                    ></textarea>
+                  </div>
+
+
           
                   <div class="form-group">
                     <label for="texto"

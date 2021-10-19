@@ -17,7 +17,7 @@ import { AlertasService } from '../service/alertas.service';
   styleUrls: ['./inicio.component.css']
 })
 export class InicioComponent implements OnInit {
- 
+  listaTrends: Tema[]
   listaTemas: Tema[];
   idTema: number;
   tema: Tema = new Tema();
@@ -49,13 +49,15 @@ export class InicioComponent implements OnInit {
 
   ngOnInit() {
     if (environment.token == '') {
-      this.router.navigate(['/inicio']);
+      this.router.navigate(['/entrar']);
     }
 
     this.auth.refreshToken();
     
     this.getAllTemas();
     this.getAllPostagens();
+    this.getAllTrends();
+    
   }
 
   getAllTemas() {
@@ -63,6 +65,13 @@ export class InicioComponent implements OnInit {
       this.listaTemas = resp;
     });
   }
+  getAllTrends(){
+    this.temaService.getTrends().subscribe((resp : Tema[])=>{
+      
+      this.listaTrends=resp;
+    })
+  }
+
 
   findByIdTema() {
     this.temaService.getTemaById(this.idTema).subscribe((resp: Tema) => {
@@ -79,6 +88,7 @@ export class InicioComponent implements OnInit {
   getAllPostagens() {
     this.postagemService.getAllPostagens().subscribe((resp: Postagem[]) => {
       this.listaPostagens = resp;
+      console.log(this.listaTrends)
     });
   }
 
