@@ -38,6 +38,8 @@ export class TemaService {
     return this.http.get<Tema[]>(`https://ecoletagen.herokuapp.com/temas/descricao/${descricao}`,this.token)
   }
 
+  // getTrends
+
 
   putTema(tema: Tema): Observable<Tema>{
     return this.http.put<Tema>('https://ecoletagen.herokuapp.com/temas', tema, this.token)
