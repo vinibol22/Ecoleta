@@ -35,7 +35,9 @@ export class InicioComponent implements OnInit {
   idPostagem : Postagem = new Postagem();
 
   tituloPost : string
-
+  num:number=0
+  num1:number=1
+  num3:number
 
    key = 'data'
    reverse = true
@@ -69,10 +71,12 @@ export class InicioComponent implements OnInit {
     this.temaService.getTrends().subscribe((resp : Tema[])=>{
       
       this.listaTrends=resp;
+     
+       
+      
     })
   }
-
-
+ 
   findByIdTema() {
     this.temaService.getTemaById(this.idTema).subscribe((resp: Tema) => {
       this.tema = resp;
