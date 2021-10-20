@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Usuario } from '../model/Usuario';
 import { UsuarioLogin } from '../model/UsuarioLogin';
+import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
 
 @Component({
@@ -19,7 +20,8 @@ oEmail:string;
 usuarioLogin:UsuarioLogin=new UsuarioLogin();
   constructor(
     private auth:AuthService,
-    private router:Router
+    private router:Router,  
+    private alertas: AlertasService
   ) { }
   
   ngOnInit(){
@@ -40,7 +42,7 @@ entrar(){
     this.router.navigate(['/inicio'])
 },erro=>{
   if(erro.status==401){
-    alert('Usuário ou senha estão incorretos!')
+    this.alertas.showAlertSuccess('Usuário ou senha estão incorretos!')
   }
 })
 }
@@ -60,12 +62,12 @@ cadastrarUsuario(){
  }
   this.usuario.tipo = this.tipoUser;  
   if(this.usuario.senha != this.confirmarSenha){
-      alert('senhas incorretas')
+    this.alertas.showAlertDanger('senhas incorretas')
   }else{
     this.auth.cadastrar(this.usuario).subscribe((resp:Usuario)=>{
       this.usuario=resp
       this.router.navigate(['/entrar'])
-      alert('usuario cadastrado com sucesso')
+      this.alertas.showAlertSuccess('usuario cadastrado com sucesso')
     })
   }
 

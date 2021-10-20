@@ -9,7 +9,7 @@ export class TipoPostagensComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(){
   }
 
 }
