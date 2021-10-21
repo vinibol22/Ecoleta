@@ -48,7 +48,8 @@ header{
 .sidebar{
   z-index: 1;
   top: 0;
-  background-color:#123417;
+  background: linear-gradient(to right, #09A64E, #97e74d);
+
   margin-top: 70px;
   padding-top: 30px;
   position: fixed;
@@ -58,6 +59,7 @@ header{
   transition: 0.5s;
   transition-property: left;
   overflow-y: auto;
+  margin-top: 83px;
 }
 
 .profile_info{
@@ -66,6 +68,7 @@ header{
   justify-content: center;
   align-items: center; 
   width: 100%;
+
 }
 
 .sidebar .profile_info .profile_image{
@@ -264,7 +267,7 @@ a{
   cursor: pointer;
 }
 nav{
-  background-color:#123417;
+  background: linear-gradient(to right, #09A64E, #97e74d);
   position: fixed;
   z-index: 9999;
   width:100%;
@@ -273,4 +276,10 @@ nav{
 }
 .height{
   height:5rem;
+}
+h4{
+  color:white;
+}
+.nome{
+  color: white;
 }
