@@ -1,7 +1,9 @@
 
 .body{
-   background-color: hsl(110, 66%, 94%);
+   
+   background-color: hsl(110, 66%, 94%); 
    height: 100%;
+   padding:0;
 }
 
 

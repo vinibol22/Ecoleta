@@ -1,4 +1,8 @@
 
+img{
+    width:80px;
+    border-radius: 50px;
+}
 .icons{
     font-size:2rem;
 }
@@ -9,8 +13,11 @@
 .barra{
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    min-height: 9rem;
-    height:36rem;
+    width:19rem;
+    height:100%;
+    position: fixed;
+    padding-top:0;
+
         background:#123417;
 
 }
