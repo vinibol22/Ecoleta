@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,500;1,700&display=swap');
+
 
 .body{
    background-color: hsl(110, 66%, 94%);
@@ -137,4 +139,13 @@ i{
 
 .text11{
     font-size:2rem;
+}
+
+
+.name-friend{
+    font-size: 15px ;
+    font-family: 'Roboto bold', sans-serif;
+}
+.text-friends{
+    font-size:15px;
 }
