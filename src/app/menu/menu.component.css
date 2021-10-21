@@ -1,3 +1,6 @@
+.munu{
+  padding-top: 0px;
+}
 body{
     margin: 0;
     padding: 0;
@@ -48,7 +51,7 @@ body{
   .sidebar{
     z-index: 1;
     top: 0;
-    background-color:#123417;
+    background: linear-gradient(to right, #09A64E, #97e74d);
     margin-top: 70px;
     padding-top: 30px;
     position: fixed;
@@ -58,6 +61,7 @@ body{
     transition: 0.5s;
     transition-property: left;
     overflow-y: auto;
+    margin-top: 83px;
   }
   
   .profile_info{
@@ -263,6 +267,6 @@ a{
     cursor: pointer;
 }
 nav{
-    background-color:#123417;
+  background: linear-gradient(to right, #09A64E, #97e74d);
 
 }
