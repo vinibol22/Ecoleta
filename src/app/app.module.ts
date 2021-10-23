@@ -32,6 +32,7 @@ import { TipoPostagensComponent } from './tipo-postagens/tipo-postagens.componen
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,6 +55,7 @@ import { TipoPostagensComponent } from './tipo-postagens/tipo-postagens.componen
     SuporteComponent,
     EventosComponent,
     TipoPostagensComponent,
+  
    
    
   ],

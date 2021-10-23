@@ -121,7 +121,7 @@ i{
    }
 
    .box-input{
-        width:100%;   
+        width:80%;   
         background:white;
         /* margin-right: 1rem; */
         border-radius:10px;
@@ -148,4 +148,7 @@ i{
 }
 .text-friends{
     font-size:15px;
+}
+.inputtt{
+    width:100px ;
 }

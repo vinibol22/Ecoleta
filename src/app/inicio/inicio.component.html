@@ -53,9 +53,9 @@
               <div class="separacao"></div>
                 
          
-                <a class="btn bottom1 mr-2" href="#postagens" data-toggle="modal" data-target="#novaPostagem">Postar</a>
+                <a class="btn bottom1 mr-2"routerLink="/tipo-postagens">Postar</a>
            
-          
+          <!-- href="#postagens" data-toggle="modal" data-target="#novaPostagem" -->
           
           
                 </div>
@@ -78,20 +78,20 @@
                     </div> -->
                     <div class="row d-flex justify-content-center mt-5 mb-5 box-input">
      
-           <div *ngFor="let itemmm of listaTrends"> <p>{{itemmm.descricao}}</p>
-                                                       <!-- <p>{{item.foto}} </p> -->
+           <!-- <div *ngFor="let itemmm of listaTrends"> <p>{{itemmm.descricao}}</p>   <!-- <p>{{item.foto}} </p>
                                                     
-          </div>         
+                                                    
+          </div>  -->         
        
             
 
-                      <div class="col-md-4 ">     
+                      <!-- <div class="col-md-4 ">     
                         <div class="form-group d-flex justify-content-center  box-inputt">
                            <input type="text" class="form-control input"id="titulo" placeholder="Pesquise por título" [(ngModel)]='tituloPost' (keyup)='findByTituloPostagem()'>
                         
                         </div>
                      
-                    </div>
+                    </div> -->
               </div>
 
 

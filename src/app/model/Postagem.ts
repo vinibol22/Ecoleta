@@ -12,6 +12,7 @@ export class Postagem{
     public presentes:number;
     public localidade:string;
     public usuario:Usuario;
+    public numeroTelefone:string;
     
    
   

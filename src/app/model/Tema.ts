@@ -6,7 +6,7 @@ export class Tema{
     public numeroPostagens:number;
     public fotoLink:string;
     public postagem:Postagem[];
-  
+    public textoTema:string;
     
   
   }

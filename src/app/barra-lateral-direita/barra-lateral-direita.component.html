@@ -1,4 +1,41 @@
-<div class="box">
-    
+
+<div class="container-fluid">
+  
+<div class="container1">
+    <div *ngFor="let item of listaTrends">
+  
+        <main class="grid" >
+        <article>
+            <img src="{{item.fotoLink}}" alt="">
+            <div class="text">
+                <h3>{{item.descricao}}</h3>
+                <!-- <p>lorem ipsum dolor sit am lorem ipsum lorem ipsum</p> -->
+                <button routerLink="/tema">Escolha uma coleta </button>
+            </div>
+        </article>
+    </main>
+
+    </div>
 
 </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
