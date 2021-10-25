@@ -25,7 +25,8 @@ export class InicioComponent implements OnInit {
 
   //!variaveis para o usuário
   idUser=environment.id;
-  foto=environment.foto
+  foto=environment.foto;
+  nome=environment.nome
   usuario: Usuario = new Usuario();
 
   //? variaveis para a postagem
@@ -126,10 +127,22 @@ export class InicioComponent implements OnInit {
     this.postagemService.putDescurtir(id).subscribe(()=>{
       this.getAllPostagens()
   })
+  }
 
 
+  marcada(id : number){
+    this.postagemService.putMarcar(id).subscribe(()=>{
+        this.getAllPostagens()
+    })
+  }
+  desmarcada(id : number){
+    this.postagemService.putDesmarcar(id).subscribe(()=>{
+      this.getAllPostagens()
+  })
 
-}
+  }
+
+
 
 findByTituloPostagem(){
   if(this.tituloPost == ''){

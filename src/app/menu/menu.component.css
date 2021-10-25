@@ -267,7 +267,7 @@ a{
   cursor: pointer;
 }
 nav{
-  background: linear-gradient(to right, #09A64E, #97e74d);
+  background: linear-gradient(to right, #02411d, #8dd34b);
   position: fixed;
   z-index: 9999;
   width:100%;

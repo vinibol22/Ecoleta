@@ -19,6 +19,7 @@
 
   
      padding: 32px; 
+    
 }
 
 .cards .card {
@@ -31,8 +32,9 @@
     border-radius: 8px;
     height: 370px;
     max-height: 468px;
-    margin-left: 32px;
+    margin-left: 32px; 
 }
+ 
 
 .cards .card:first-child {
     margin-left: 0;

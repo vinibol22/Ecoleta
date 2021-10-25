@@ -115,4 +115,15 @@ export class BarraLateralDireitaComponent implements OnInit {
       this.idPostagem = resp;
     })
   }
+
+  findByDescricaoTema(){
+    if(this.descricaoTema == ''){
+      this.getAllTemas();
+    }else{
+       this.temaService.getByDescricaoTema(this.descricaoTema).subscribe((resp:Tema[])=>{
+      this.listaTemas=resp
+  })
+  
+  }
+  }
 }

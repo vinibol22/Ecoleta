@@ -6,7 +6,7 @@
     align-items: center;
 }
 .grid > article{
-    background: #eee5e9;
+    background: #79d870;
     border: none;
     box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);
     border-radius: 20px;
@@ -32,7 +32,7 @@
     text-transform: uppercase;  
 }
 .text button{
-    background:#ef6f6c;
+    background: linear-gradient(to right, #0981a6, #4de7c1);
     border-radius:20px;
     border:none;
     color:#fff;

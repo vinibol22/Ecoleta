@@ -40,7 +40,7 @@ oEmail:string;
   }
   cadastrarUsuario(){
    if(this.usuario.foto=='' || this.usuario.foto == null){
-     this.usuario.foto = 'assets/img/anonimo.jpeg'
+     this.usuario.foto = 'https://raw.githubusercontent.com/vinibol22/Ecoleta/criacao-novapage-tema/src/assets/img/anonimo.jpeg'
    }
     this.usuario.tipo = this.tipoUser;  
     if(this.usuario.senha != this.confirmarSenha){
