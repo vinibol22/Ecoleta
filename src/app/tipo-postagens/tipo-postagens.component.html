@@ -1,8 +1,140 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-9">
+<div class="height"></div>      
+<div class="cards">
+<div *ngFor="let itemmm of listaTemas">
+    <div class="row">
+        <div class="col-11">
+    
+    <div class=".body">
+  
+            <div class="card contact">
+                <div class="icon">
+                    <img src="{{itemmm.fotoLink}}" alt="Contact us.">
+                </div>
+                <h3>{{itemmm.descricao}}</h3>
+                <span>{{itemmm.textoTema}}</span>
+                <button href="#postagens" data-toggle="modal" data-target="#novaPostagem">Learn More</button>
+            </div>
+           
+       </div> </div> </div><div class="col-1"></div></div></div><div class="height"></div>  </div>
+    </div>
+         
+    </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div
+    class="modal fade"
+    id="novaPostagem"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="TituloModalCentralizado"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="TituloModalCentralizado">Nova Postagem</h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Fechar"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="titulo">Título</label>
+            <input
+              type="text"
+              class="form-control"
+              id="titulo"
+              placeholder="Digite o título"
+              [(ngModel)]="postagem.titulo"
+            />
+          </div>
+  
+          <div class="form-group">
+            <label for="texto">Texto</label>
+            <textarea
+              class="form-control"
+              name="texto"
+              id="texto"
+              rows="3"
+              [(ngModel)]="postagem.texto"
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="texto">localidade</label>
+            <textarea
+              class="form-control"
+              name="texto"
+              id="texto"
+              rows="3"
+              [(ngModel)]="postagem.localidade"
+            ></textarea>
+          </div>
+
+
+  
+          <div class="form-group">
+            <label for="texto"
+              >Escolha um tema 
+              <a data-dismiss="modal" routerLink="/tema">ou cadastre um novo</a>:
+            </label> 
+            <!-- *ngIf="auth.admin()" -->
+            <select
+              name="tema"
+              id="tema"
+              class="form-control"
+              (change)="findByIdTema()"
+              [(ngModel)]="idTema"
+            >
+              <option *ngFor="let tema of listaTemas" value="{{ tema.id }}">
+                {{ tema.descricao }}
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">
+            Cancelar
+          </button>
+          <button type="button" class="btn btn-success" (click)="postar()" data-dismiss="modal" routerLink="/inicio">
+            Publicar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+<!-- 
 
 <div class="contaniner-fluid">
+    <div class="height"></div>
     <div class="row">
-    <div class="col-12">
+        <div class="col-2"></div>
+    <div class="col-10">
 <div class="body mt-2">
 <div class="container1">
     <div class="card1">
@@ -115,4 +247,4 @@
     
 
 
-</div></div></div></div></div>
+</div></div></div></div></div> -->

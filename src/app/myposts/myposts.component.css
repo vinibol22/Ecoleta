@@ -47,9 +47,10 @@
      margin-left: 1rem;
  }
  i{
-     font-size:2.1rem;
+     font-size:1.5rem;  
      display: flex;
      margin-top:0.2rem ;
+    color: #18fc10
  }
  
  .box-dos-icons{
@@ -85,7 +86,7 @@
  }
  
     a {
-     background:rgb(77, 253, 183);
+     background: linear-gradient(to right, #0981a6, #4de7c1);
      color: white;
      border: white;
     }
@@ -111,3 +112,10 @@
       border-radius: 10px;
  }
 
+ .name-friend{
+    font-size: 17px ;
+    font-family: 'Roboto bold', sans-serif;
+}
+.text-friends{
+    font-size:20px;
+}
