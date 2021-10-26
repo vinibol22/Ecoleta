@@ -58,14 +58,17 @@
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0"> <!--Criando a barra de navegação.-->
                         <li class="nav-item">
                             <!--(a)para lincar p/ pagina. |(nav-link active)vai dar estilos extras a essa parte ara mostrar que é ele q está valido. (aria-current="page")só ocorrera na pagina que está ativa. |-->
-                            <a href="#" class="nav-link active" aria-current="page">Home</a></li>
+                            <a href="#" class="nav-link active" aria-current="page" data-toggle="modal" data-target="#entrarUsuarioModal">Home</a></li>
                             <!--somente na pagina que está ativa24-->
                             <li class="nav-item">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link primary-color" data-toggle="modal" data-target="#addUsuarioModal">Cadastre-se</a></li>
+                                <li class="nav-item">
                                 <a href="#" class="nav-link primary-color" >Sobre</a></li>
                             <li class="nav-item">
                                 <a href="#" class="nav-link primary-color" >Artes</a></li>
-                            <i class="nav-item">
-                            <a href="#" class="nav-link primary-color" >Contato</a></i>              
+                            <li class="nav-item">
+                            <a href="#" class="nav-link primary-color" >Contato</a></li>              
                     </ul>
                 </div>
             </div>
@@ -604,4 +607,210 @@
         </body>
     
     
+        <div class="modal" tabindex="-1" id="addUsuarioModal">
+            <div class="modal-dialog"> <!--Modal de dialogo, o que tráz a janela do modal para a pagina, como se fizesse ela ter conteúdo-->
+                <div class="modal-content"> <!--(modal-dialog)- Inicio do conteúdo do modal e tras o fundo do modal para que as coisas possam ser escritas e lidas-->
+                
+                    <!--Titulo interno do Modal-->
+                    <!--(modal-header)- Titulo interno do Modal, nessa parte representando o Cabeçalho-->
+                        <div class="modal-header">
+                    <!--Pra colocar a mensagem 'é rapido e fácil' logo a baixo da palavra Cadastre-se, criei um container para dentro dele criar duas linhas com row e assim poder organiza-los de forma vertical-->
+                            <div class="container"> <!--(container)- Deixa layout alinhado corretamente na página-->
+                            <div class="row"> <!--(row)-linhas que definem as divisões-->
+                                <!--** PRECISO VOLTAR AQUI para entender esse Label no final do "addUsuarioModalLabel"-->
+                                <h1 class="modal-title" class="addUsuarioModalLabel" >Cadastre-se<br></h1> <!--(modal-title) Titulo do modal-->
+                            </div>
+                            <div class="row">
+                                <h5 class="modal-title"  class="text-black-50">É rápido e fácil<br></h5>
+                            </div>
+                            </div> <!--TEM UM ESPAÇO QUE QERO TIRAR DEPOIS DESSA FRASE E ANTES DOS ÚLTIMOS BOTÕES-->
+                    <!--/Titulo interno do Modal-->
+                    
+        <!--O 'x' que fica no canto superio para fehcar a tela -->
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+                
+                        </div>
+            <div class="modal-body">
+                <!--<p>Escreva alguma coisa aqui</!--p>-->
+            <!--Formulário começa aqui-->   
+                <div class="container"> <!-- Pega tudo POR ENQUANTO TIREI O CONTAINER-FLUID -->
+                    <div class="row">
+                            <div class="col-md-12 mt-5 mb-5"> 
+                            
+                            
+                                <!--  POR ENQUANTO TIREI O (D-flex justify-content-center) o meu conteúdo será jogado para esquerda de forma automatica. Por isso vou colocar o d-flex -->
+                                <div class="row"> 
+                                    <div class="col-md-12">
+                                    <!--TIREI pq já tem no inicio  <h1 class="text-center">Cadastro</h1> -->
+                                    <div class="row justify-content-around"> <!--Pra deixar uma coluna ao lado da outra-->
+                                        <div class="col col-md-6" >
+                                            <div class="form-group">
+                                                <!-- <label for="nome">Nome</label> -->
+                                                <input  [(ngModel)]="usuario.nome" class="form-control" type="text" name="nome" id="nome" placeholder="Seu nome"> 
+                                            </div>
+                                        </div>
+                                        <div class="col col-md-6">
+                                            <div class="form-group">
+                                                <!-- <label for="usuario">Usuário</label>-->  
+                                                <input [(ngModel)]="usuario.usuario" class="form-control" type="text" name="usuario" id="usuario" placeholder="Seu usuário"> 
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <!--<label for="foto">Link da Foto</label>-->
+                                            <input  [(ngModel)]="usuario.foto" class="form-control" type="text" name="foto" id="foto" placeholder="Link da sua foto"> 
+                                        </div>
     
+                                        <div class="form-group">
+                                            <!--<label for="foto">Link da Foto</label>-->
+                                            <input  [(ngModel)]="usuario.email" class="form-control" type="text" name="email" id="email" placeholder="Seu email"> 
+                                        </div>
+                
+                                        <div class="row justify-content-around"> 
+                                        <div class="col col-md-6">
+                                        <div class="form-group">
+                                            <!--<label for="senha">Senha</label>-->
+                                            <input (input)='confirmSenha($event)' class="form-control" type="password" name="senha" id="senha" placeholder="Nova senha"> 
+                                        </div>
+                                        </div>
+                                        <div class="col col-md-6">
+                                        <div class="form-group">
+                                        <!--<label for="ConfirmSenha">Confirmar Senha</label> -->
+                                            <input [(ngModel)]="usuario.senha" class="form-control" type="password" name="ConfirmSenha" id="ConfirmSenha" placeholder="Confirmar Senha">
+                                        </div>
+                                        </div>
+                                        </div>
+                                        <!--  -->
+                                 
+                                        <!-- -->
+    
+    
+                                        <div class="form-group" >
+                                            <label for="tipo" class="text-secondary" >Tipo de Usuário</label>
+                                            <select class="form-control" name="tipo" id="tipo">
+                                                <option>Selecione um tipo de usuário: </option>
+                                                <option value="normal">Normal</option>
+                                                <option value="adm">Administrador </option>
+                                            </select>
+                                        </div>
+                                        
+                                        <!-- Vou colocar os botões dentro de uma div, para poder centralizar eles-->
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <!--/Formulário começa aqui--> 
+            </div>
+    
+            
+            <!---->
+                <div class="modal-footer">
+                    <!---->
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-success mr-4"data-dismiss="modal"(click)="cadastrarUsuario()" >Cadastre-se</button>
+                        <button type="submit" class="btn  btn-danger"routerLink='/entrar' >Cancelar</button>
+                        <!--  -->
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- Modal esqueleto -->
+    
+    <!-- / INICIO DO MODAL CADASTRO -->
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+    
+    <!--INICIO DO MODAL ENTRAR-->
+    
+    
+        <!-- Modal esqueleto -->
+        <!--(id) - Como o modal foi registrado com # no data-target, aqui ele será representado por um id.-->    
+        <div class="modal" tabindex="-1" id="entrarUsuarioModal">
+            <div class="modal-dialog"> <!--Modal de dialogo, o que tráz a janela do modal para a pagina, como se fizesse ela ter conteúdo-->
+                <div class="modal-content"> <!--(modal-dialog)- Inicio do conteúdo do modal e tras o fundo do modal para que as coisas possam ser escritas e lidas-->
+                
+                    <!--Titulo interno do Modal-->
+                    <!--(modal-header)- Titulo interno do Modal, nessa parte representando o Cabeçalho-->
+                        <div class="modal-header  ">
+                    <!--Pra colocar a mensagem 'é rapido e fácil' logo a baixo da palavra Cadastre-se, criei um container para dentro dele criar duas linhas com row e assim poder organiza-los de forma vertical-->
+                            <div class="container "> <!--(container)- Deixa layout alinhado corretamente na página-->
+                                <div class="row col-12 justify-content-center"> <!--(row)-linhas que definem as divisões-->
+                                    <!--** PRECISO VOLTAR AQUI para entender esse Label no final do "addUsuarioModalLabel"-->
+                                    <h1 class="modal-title" class="entrarUsuarioModal" data-dismiss="modal" >Entrar<br></h1> <!--(modal-title) Titulo do modal-->
+                                    </div>
+                                    <div class="row">
+                                        <h5 class="modal-title"  class="text-black-50"><br></h5>
+                                    </div>
+                            </div> <!--TEM UM ESPAÇO QUE QERO TIRAR DEPOIS DESSA FRASE E ANTES DOS ÚLTIMOS BOTÕES-->
+                    <!--/Titulo interno do Modal-->
+                    
+        <!--O 'x' que fica no canto superio para fehcar a tela -->
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+                        </div>
+            <div class="modal-body">
+                <div class="container"> <!-- Pega tudo POR ENQUANTO TIREI O CONTAINER-FLUID -->
+                    <div class="row">
+                            <div class="col-md-12 mt-5 mb-5"> 
+                                <!--  POR ENQUANTO TIREI O (D-flex justify-content-center) o meu conteúdo será jogado para esquerda de forma automatica. Por isso vou colocar o d-flex -->
+                                <div class="row"> 
+                                    <div class="col-md-12">
+                                       
+                                       <div class="row justify-content-around">
+                                        
+    
+                                    <!-- TELA LOGIN COM NOME E SENHA dentro do modal-->
+                                    <div class="container-fluid">
+                                        <div class="row d-flex justify-content-center"> 
+                                    <div class="col-md-12  ">
+    
+                                    <div class="form-group"><!-- * -->
+                                        <label for="usuario ">Usuário </label><!-- * -->
+                                        <input  [(ngModel)]="usuarioLogin.usuario"  class="form-control" type="text" name="usuario" id="usuario1" placeholder="Seu usuário"> <!-- * -->
+                                    </div>
+            
+                                    <div class="form-group">
+                                        <label for="senha">Senha</label>
+                                        <input [(ngModel)]="usuarioLogin.senha"  class="form-control" type="password" name="senha" id="senha1" placeholder="Sua senha">
+                                    </div>
+                                    
+           
+            </div>
+        </div>
+    </div>
+    
+                                    <hr class="mt-5 mb-5">
+                                            <!-- /TELA LOGIN COM NOME E SENHA dentro do modal-->
+      
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+                <div class="modal-footer">
+                    <!---->
+                    <div class="d-flex col-12 justify-content-center">
+                        <button type="submit" class="btn btn-success"data-dismiss="modal" (click)="entrar()" >Entrar</button>
+                                           <!--  -->
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>

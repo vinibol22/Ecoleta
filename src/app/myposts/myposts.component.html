@@ -64,12 +64,13 @@
                           <button class="btn" (click)='this.getPostagemById(item.id)' (click)='this.curtida(item.id)'><i class="fas fa-recycle"></i>
                           </button>
                           Curtidas :{{item.curtidos}}
-                          <br><small class="text-muted">
+                          <br>     </small>
+                          <small class="text-muted">
                     {{ item.data | date: "dd/MM/yyyy" }} às
                     {{ item.data | date: "HH:mm" }}
                   </small>
                         
-                        </small>
+                   
                     </p>  
                   <a
                   [routerLink]="['/postagem-edit', item.id]"
