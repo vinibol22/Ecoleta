@@ -1,0 +1,69 @@
+html {
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    perspective: 1px;
+    color: black;
+}
+main {
+    margin-top: 50px;
+    padding: 0;
+    height: calc(100% - 50px);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    perspective: 1px;
+    color: black;
+}
+
+h1 {
+    text-align: center;
+    font-size: 400%;
+    color: white;
+    text-shadow: 0 2px 2px #000;
+}
+
+#secao1 {
+    background-color: black;
+    background-size: cover;
+    background-image: url(http://placecage.com/1000/1000);
+}
+
+#secao2 {
+    background-color: yellow;
+    transform: translateZ(-0.9px) scale(2);
+    z-index: -1;
+    background-image: url(http://placecage.com/1000/1000);
+}
+
+#secao3 {
+    background-color: green;
+    background-size: cover;
+    background-image: url(http://placecage.com/1000/1000);
+}
+
+.slide {
+    position: relative;
+    padding: 25% 10%;
+    min-height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 -1px 10px rgba(0, 0, 0, -7);
+    transform-style: inherit;
+}
+
+nav {
+    background-color: black;
+    color: #fff;
+    line-height: 50px;
+    padding: 0 10px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+}

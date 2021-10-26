@@ -8,6 +8,8 @@ import {InicioComponent } from './inicio/inicio.component';
 import { TemaComponent } from './tema/tema.component';
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
+import { EventosComponent } from './eventos/eventos.component';
+import { SuporteComponent } from './suporte/suporte.component';
 
 
 
@@ -32,8 +34,20 @@ const routes: Routes = [
     path:"postagem-edit/:id", component: PostagemEditComponent
   },{
     path:"postagem-delete/:id", component: PostagemDeleteComponent
-  }
-];
+  },{
+    path:"eventos",component:EventosComponent
+  },{
+    path:"suporte",component:SuporteComponent
+  },
+  
+  
+
+
+
+
+
+  
+]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

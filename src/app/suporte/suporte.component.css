@@ -16,8 +16,23 @@ padding: 2px;
 
 .box{
     padding: 2px;
+    left: 10;
 }
 
 .card{
     margin: 10px;
+   
+    
+    
 }
+
+.card-title{
+    display: inline;
+
+}
+
+.card-body{
+    display: inline;
+    align-items: center;
+}
+

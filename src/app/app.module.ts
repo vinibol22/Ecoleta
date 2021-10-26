@@ -22,6 +22,7 @@ import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delet
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { EventosComponent } from './eventos/eventos.component';
 import { SuporteComponent } from './suporte/suporte.component';
+import { PontosComponent } from './pontos/pontos.component';
 
 
 
@@ -42,6 +43,7 @@ import { SuporteComponent } from './suporte/suporte.component';
     PostagemEditComponent,
     EventosComponent,
     SuporteComponent,
+    PontosComponent,
   ],
   imports: [
     BrowserModule,
