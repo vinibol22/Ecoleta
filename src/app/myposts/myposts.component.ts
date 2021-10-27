@@ -15,6 +15,7 @@ import { TemaService } from '../service/tema.service';
   styleUrls: ['./myposts.component.css']
 })
 export class MypostsComponent implements OnInit {
+  listaTrends: Tema[]
   listaTemas: Tema[];
   idTema: number;
   tema: Tema = new Tema();
@@ -63,6 +64,15 @@ export class MypostsComponent implements OnInit {
     this.temaService.getAllTema().subscribe((resp: Tema[]) => {
       this.listaTemas = resp;
     });
+  }
+  getAllTrends(){
+    this.temaService.getTrends().subscribe((resp : Tema[])=>{
+      
+      this.listaTrends=resp;
+     
+       
+      
+    })
   }
 
   findByIdTema() {
@@ -122,5 +132,10 @@ export class MypostsComponent implements OnInit {
     })
     }
    
+  }
+  marcada(id : number){
+    this.postagemService.putMarcar(id).subscribe(()=>{
+        this.getAllPostagens()
+    })
   }
 }

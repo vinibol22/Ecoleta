@@ -48,7 +48,7 @@ header{
 .sidebar{
   z-index: 1;
   top: 0;
-  background: linear-gradient(to right, #09A64E, #97e74d);
+  background: #02411d;
 
   margin-top: 70px;
   padding-top: 30px;
@@ -59,7 +59,8 @@ header{
   transition: 0.5s;
   transition-property: left;
   overflow-y: auto;
-  margin-top: 83px;
+  margin-top:83px;
+  border-top: #fff;
 }
 
 .profile_info{
@@ -267,7 +268,7 @@ a{
   cursor: pointer;
 }
 nav{
-  background: linear-gradient(to right, #02411d, #8dd34b);
+  background: #02411d;
   position: fixed;
   z-index: 9999;
   width:100%;
