@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg">
+ <nav class="navbar navbar-expand-lg">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -9,17 +9,20 @@
       
       </li>
 
-      <li class="nav-item pl-3 d-flex justify-content-center">
-        <p class="m-0 font-weight-bold text-white fs-16">Olá {{nome}} seja muito bem-vindo as nossa rede social!  </p>   <a [routerLink]="['/usuario-edit',{id}]"><p class="m-0 font-weight-bold text-white fs-16"><i class="fa fa-pencil-square"></i></p> </a><!--estaca como nome do usuario-->
-      </li>
+   
 
       <li class="nav-item pl-3">
     
       </li>
     </ul>
   
-    <ul class="navbar-nav ml-auto d-flex align-items-center">    
+      <ul class="navbar-nav ml-auto d-flex align-items-center"> <div class="nav-item pl-3 d-flex justify-content-center">
+          <p class="m-0 font-weight-bold text-white fs-16"></p> <a [routerLink]="['/usuario-edit',{id}]"><p class="m-0 font-weight-bold text-white fs-16"><i class="fa fa-pencil-square"></i></p> </a>
+    </div>   
       <li class="nav-item active">
+
+   
+
         <img src="../../assets/img/Ecoleta (2).svg" alt="Logo" 
         width="75px" height="75px" class="img-fluid rounded-circle">
           </li>
@@ -28,13 +31,11 @@
               </li>
       <li class="nav-item pl-3">
           <a (click)='sair()'class="m-0 font-weight-bold text-white fs-16"> <i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
-          <!-- AQUI PODERIA SER A FOTO DO USUARIO, ficaria no canto direto da pagina.-->
       
-          <!-- /AQUI PODERIA SER A FOTO DO USUARIO-->
     </ul>
 
   </div>
-</nav>
+</nav> 
 <div class="height"></div>
 
 

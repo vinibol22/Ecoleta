@@ -1,25 +1,28 @@
+<div class="height"></div>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-3"></div>
-        <div class="col-9">
+        <div class="col-2"></div>
+        <div class="col-10">
+          <div class="row"></div>
 <div class="height"></div>      
 <div class="cards">
 <div *ngFor="let itemmm of listaTemas">
     <div class="row">
+      
         <div class="col-11">
     
     <div class=".body">
-  
+
             <div class="card contact">
                 <div class="icon">
                     <img src="{{itemmm.fotoLink}}" alt="Contact us.">
                 </div>
                 <h3>{{itemmm.descricao}}</h3>
                 <span>{{itemmm.textoTema}}</span>
-                <button href="#postagens" data-toggle="modal" data-target="#novaPostagem">Learn More</button>
+                <button href="#postagens" data-toggle="modal" data-target="#novaPostagem">Postar</button>
             </div>
            
-       </div> </div> </div><div class="col-1"></div></div></div><div class="height"></div>  </div>
+       </div> </div> <div class="col-1"></div></div></div></div><div class="height"></div>  </div>
     </div>
          
     </div>
@@ -85,12 +88,23 @@
             <label for="texto">localidade</label>
             <textarea
               class="form-control"
-              name="texto"
-              id="texto"
+              name="localidade"
+              id="localidade"
               rows="3"
               [(ngModel)]="postagem.localidade"
             ></textarea>
           </div>
+
+          <div class="form-group">
+            <label for="numeroTelefone">Número telefone</label>
+            <input
+              class="form-control"
+              name="numeroTelefone"
+              id="telefone"
+              rows="3"
+              [(ngModel)]="postagem.numeroTelefone"
+            >
+
 
 
   

@@ -46,6 +46,8 @@
     background:white;
     
     border-radius: 15px;
+    box-shadow: 3px 3px 3px 3px #0de76f;
+
 
 }
 .foto{
@@ -73,8 +75,9 @@ i{
     width: 100%;
     background:white;
     border-radius: 15px;
+    box-shadow: 3px 3px 3px 3px #0de76f;
 
-    height:15rem;
+    /* height:15rem; */
     
 
 }
@@ -237,4 +240,19 @@ i{
     color: white;
     border:white;
     border-radius: 20px;
+}
+/* .{
+    font-size:1.5rem;  
+    display: flex;
+    margin-top:0.2rem ;
+   color: #18fc10
+} */
+.reciclagem{
+    color: #18fc10 ;
+}
+.text-telocalidade{
+    font-size: 11px;
+}
+.local{
+    padding: 0px;
 }
