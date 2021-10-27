@@ -7,6 +7,6 @@ export class Tema{
     public fotoLink:string;
     public postagem:Postagem[];
     public textoTema:string;
-    
+    public sites:string;
   
   }

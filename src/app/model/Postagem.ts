@@ -13,7 +13,7 @@ export class Postagem{
     public localidade:string;
     public usuario:Usuario;
     public numeroTelefone:string;
-    
+    public dataColeta:string;
    
   
   }
