@@ -46,9 +46,13 @@
     background:white;
     
     border-radius: 15px;
+    border:solid 1px #0de76f;
+  
+
+
+}
+.card11:hover{
     box-shadow: 3px 3px 3px 3px #0de76f;
-
-
 }
 .foto{
     border-radius: 50px;
@@ -75,12 +79,15 @@ i{
     width: 100%;
     background:white;
     border-radius: 15px;
-    box-shadow: 3px 3px 3px 3px #0de76f;
+    border:solid 1px #0de76f;
 
     /* height:15rem; */
     
 
 }
+.postagens-amigos:hover{
+box-shadow: 3px 3px 3px 3px #0de76f;
+} 
 .separar{
     height:1rem;
 }
@@ -176,7 +183,7 @@ i{
     align-items: center;
 }
 .grid > article{
-    background: #79d870;
+    background:linear-gradient(to right, #09A64E, #97e74d);
     border: none;
     box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);
     border-radius: 20px;

@@ -67,9 +67,12 @@
      width: 100%;
      background:white;
      border-radius: 15px;
-     box-shadow: 3px 3px 3px 3px #0de76f;
+     border:solid 1px #0de76f;
 
  
+ }
+ .postagens-amigos:hover{
+    box-shadow: 3px 3px 3px 3px #0de76f;
  }
  .nome-amigo{
      margin-top:0.3rem;
