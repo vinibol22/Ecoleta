@@ -22,7 +22,7 @@
     
     
     <header>
-        <img src="../../assets/Logo/Ecoleta .gif" alt="Casa 1" class="d-block w-100">
+        <img src="../../assets/Logo/Ecoleta .gif" id="coleta-img" alt="Casa 1" class="d-block w-100">
     </header>
     
     
@@ -39,7 +39,7 @@
                     <span></span> <!--SRC representa o logo no canto superior da tela-->
                 </a><!--NÃO CONSIGO AUMENTA O LOGO, COMO FAZER?-->
     
-                <!--botão de qnd estiver responsivo-->
+                <!--ngbotão de qnd estiver responsivo-->
                 <!--(bs)ACHO QUE VAI TER QUE TIRAR ESSE BS AO LADO DA DATA. |(data-toggle="collapse")Ele vai colapçar algo, que no caso é o menu. |(data-bs-target=)é o meu algo, coisas para link, sãp os itens da barra de navegação. |(aria-label="toggle navigation")informando para q serve o botão q é label. |(<i class="bi bi-list"></i>)por enquanto será esse icone do bt. MAS, QUAL ICONE USAR PARA O BOTÃO DO MENU.-->
                 <button 
                 class="navbar-toggler" 
@@ -208,9 +208,11 @@
         <!--vai separar essa parte do slider-->
         <!-- <div class="container" id="slider-container"></div> Esse código deixa o carrossel em tamanho reduzido.-->
             <!--criar o efeito carosel-->
-            
+            <br><br>
             <div class=" carousel slide" id="slider" data-ride="carousel">
-                <h2 class="title primary-color">SEPARANDO O LIXO</h2>
+                <h2 class="title primary-color">SEPARANDO O LIXO</h2> 
+                <br><br>
+
                 <!--sessão de indicators uns,botões que ficam dentro do carosel -->
                
                 <ol class="carousel-indicators">
@@ -265,8 +267,6 @@
                         </button>
     
                     <!--/Conteúdo interno do carrousel-->  
-    
-    
             </div>
     
             <br>
@@ -276,17 +276,17 @@
 
             
         
-        <!--DESTAQUES-->
+        <!--DESTAQUES--><br>
         <div class="container-fluid"id="featured-container">
              <!--(fluid) vai permitir que a imagem ou item utilize o espaço que ela tiver dentro da div-->
             <!--(id="featured-container")contianer de destaques-->
             <div class="col-12"> 
-                <!-- (col-12)O dastaque vai ocupar 12 colunas-->
                 <h2 class="title primary-color">BELEZA NOS DETALHES</h2>
                 <!--Essa classe (title) será reproduzidas em algumas partes, por isso ela será padrão, é o traço para saparar conteúdo.-->
                 <p class="subtitle secondary-color">
                     Neste mundo totalmente obcecado pelas belezas naturais, feliz é aquele que sabe dar valor ao que é "velho".
-                </p>
+                <br><br>
+                </p> 
             </div>
             <div class="col-12" id="featured-images">
                  <!--As imagens vão ficar dentro do grid-->
@@ -402,13 +402,15 @@
         <!--/DESTAQUES-->
     
         <!--  INFO -  -->
+        
         <div class="container-fluid" id="info-container">
-            <div class="col-12"> 
+            <div class="col-12"> <br>
                 <h2 class="title primary-color">A TECNOLOGIA A FAVOR DO MUNDO MELHOR!</h2><!--Essa classe (title) será reproduzidas em algumas partes, por isso ela será padrão e ai define a cor do titulo.-->
                 <p class="subtitle secondary-color">
                     Venha fazer parte desse universo
                 </p>
             </div>
+            <br><br>
             <div class="col-12">
                 <div class="row">
                     <div class="col-12 col-md-5" id="info-banner">

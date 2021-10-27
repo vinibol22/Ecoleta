@@ -1,37 +1,99 @@
-uul.social-network{ /* class ul -  */
-    list-style: none; /* Para tirar os pontos do lado dos icones*/
-     /* Seria para colocar um ao lado do outro, mas não está funcionando*/
+body{
+    background:#000;
+}
+
+/* FOOTER TOP */
+#footer {
+    padding: 1em 1.5em;
+} /* padding lateral e superior, para não ficar colado*/
+
+#footer-top {
+    margin-bottom: 0.5em;
+} /*separa o conteúdo do meio */
+
+#footer-top,
+#footer-top i {
+    color: #fff;
+} /* Tudo que estiver nesse footer-top de texto tera uma cor especifica*/
+
+#social-icons {
+    text-align: right;
+} /* Como os icones são fonte de texto, eu consigo jogar eles para a direita utilizando text-align: right */
+
+#social-icons i {
+    margin-right: 1em; /*espaçando os icones */
+    font-size: 1.5em; /*temanho deles */
+    cursor: pointer; /* para lincar com a rede social */
+}
+
+#social-icons i:hover {
+    color: #7a7a7a;  /* qnd o mouse passar pelo icone */
+}
+ /*/Footer top */
+
+
+/* FOOTER DETAILS*/
+
+#footer-details {
+    margin-bottom: 0em;
+} /*Separar do conteúdo que vem a baixo*/
+
+#news-container,
+#contact-container,
+#links-container {
     padding: 0;
-}
+    border: 0;
+    margin-bottom: 2em;
+} /* para o mobile*/
 
-ul.social-network li{ /* Foi criado esse ul para atigir as li que estão dentro delas*/
-    display: inline; /*Ele tentou usar na ul.social-network sem o li , mas não funcionou , teve que abrir essa li para deixar os ICONES um do LADO do outro*/
-    margin: 0;
-    padding: 5px; /*Para aumentar o espaçamento  na li, ou seja, nos icones*/
-}
+#footer-details h4{
+    color: #FFF;
+    margin-bottom: 1.5em; /* Espaço do conteúdo que está a baixo do titulo*/
+} /*titulo do footer/
 
-/* Como todos os icones tem o " fa " como class, vamos referencia-la para mudar os icones*/
-.fa{
-    font-size: 35pt; /*Para Aumentar o icone que está como fonte*/
-    color:  white; /* Mudar as cores dos icones aqui referenciado*/
-    padding: 10px; /*Para aumentar o espaçamento entre os icones*/
-}
-/* para passa o mouse e mudar de cor, vou refenciar a classe a baixo com o houver e color. */ 
-.fa-facebook-square:hover{ /* hover(para funcionar na hora que passar o mouse e as cores referenciadas aparecerem)*/
-    color: #3b5998;
-}
+#news-container input {
+    border-radius: 0;
+    border: none;
+} /* */
 
-.fa-instagram:hover{
-    color: #c13584;
-}
+#link-container li{
+    margin-bottom: 0.5em;
+} /* afastando os links para que o usuario possa clicar de forma melhor*/
 
-.fa-linkedin-square:hover{
-    color: #0072b1;
-}
+#link-container a {
+    text-decoration: none;
+}/*tirar qualquer decoração que tenha no link */
 
-.bg-fundoVerde{
-    background: #111E1A ;
-}
-.rodape{
-    background-color: #123417;
-}
+#link-container a:hover {
+    color: #fff;
+} /*deixa o houver visto */
+
+
+/* FOOTER BOTTOM */
+
+#footer-botoom {
+    border-top: 1px solid #a7a7a7;
+    padding-top: 2em;
+} /*linha para divião do conteúdo de forma horizontal */
+
+#footer-botoom i {
+    color: #e61e10; /* icone de coração*/
+    margin-left: 0.3em; /* afastar do texto */
+} 
+
+@media(min-width: 768px){ /*(min-width: 768px)representa web, que será do menor para o*/
+
+    #news-container {
+        padding-right: 2em; /* conteúdo do meio*/
+    }
+    #links-container {
+        padding-left: 2em; /* espaçando o conteúdo que está no canto direto*/
+    }
+    #news-container {
+        padding: 0 2em; /* realizando a divisão entre os lados*/
+        border-left: 1px solid #7a7a7a; /* colocando uma divisão entre os lados*/
+        border-right: 1px solid #7a7a7a;
+    }
+} /* */
+ /* */ 
+ 

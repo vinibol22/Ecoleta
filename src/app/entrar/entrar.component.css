@@ -1,3 +1,12 @@
+.navbar{
+    height: 13vh;
+    width:auto;
+}
+
+#coleta-img{
+    height: 90vh;
+}
+
 
 *{
     font-family: 'Lato', sans-serif;
@@ -165,6 +174,8 @@ figure.snip0015 * {
 figure.snip0015 img {
   opacity: 1;
   width: 100%;
+ 
+  
   -webkit-transition: opacity 0.35s;
   transition: opacity 0.35s;
 }

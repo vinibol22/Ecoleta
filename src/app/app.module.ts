@@ -29,6 +29,9 @@ import { AlertasComponent } from './alertas/alertas.component';
 import { SuporteComponent } from './suporte/suporte.component';
 import { EventosComponent } from './eventos/eventos.component';
 import { TipoPostagensComponent } from './tipo-postagens/tipo-postagens.component';
+import { SobreComponent } from './sobre/sobre.component';
+import { Rodape2Component } from './rodape2/rodape2.component';
+import { Menu2Component } from './menu2/menu2.component';
 
 
 
@@ -55,6 +58,9 @@ import { TipoPostagensComponent } from './tipo-postagens/tipo-postagens.componen
     SuporteComponent,
     EventosComponent,
     TipoPostagensComponent,
+    SobreComponent,
+    Rodape2Component,
+    Menu2Component,
   
    
    
