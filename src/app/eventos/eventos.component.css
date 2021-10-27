@@ -66,4 +66,28 @@ a{
                             border-color: #000;
                         }
 
+                        
+                        .card{
+                            margin: 10px;
+                            
+                            
+                        }
+                        .card-title{
+                            display: inline;
+                        
+                        }
+                        
+                        .card-body{
+                            display: inline;
+                            align-items: center;
+                        }
+
+                       
         
+                        
+
+                        .jumbotron{
+                            background:#123417;
+                            color:#ffffff
+
+                        }

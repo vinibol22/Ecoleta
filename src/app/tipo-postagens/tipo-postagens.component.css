@@ -13,12 +13,15 @@
     font-size: 16px;
     
 }
-
+.card{
+    display: flex;
+    
+}
 .cards {
-    display:flex;
-
-  
-     padding: 32px; 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 15px;
     
 }
 
@@ -31,7 +34,8 @@
     padding: 1rem 1.5rem;
     border-radius: 8px;
     height: 370px;
-    max-height: 468px;
+    /* max-height: 468px; */
+    width:15rem;
     margin-left: 32px; 
 }
  
@@ -56,7 +60,7 @@
 
 .cards .card span {
     font-weight: 300;
-    max-width: 240px;
+     max-width: 240px; 
     font-size: 80%;
     margin-bottom: 16px;
 }
@@ -106,3 +110,10 @@
 /* .height{
     height:2rem;
 } */
+.contact{
+    width:5rem;
+
+}
+.height{
+    height:1rem;
+}
