@@ -61,6 +61,7 @@
                 
          
                 <a class="btn bottom1 mr-2"routerLink="/tipo-postagens">Postar</a>
+
            
           <!-- href="#postagens" data-toggle="modal" data-target="#novaPostagem" -->
           
@@ -137,15 +138,39 @@
                     <div class="col-10 nome-amigo">  
                         <div class="row">
                           <div class="col-md-1 d-flex justify-content-center align-content-center"></div> <p class="name-friend">{{item.usuario.nome}}</p>
+               
                         </div>
                     
                         <!-- <div class="d-flex justify-content-center align-content-center"><h4>{{item.titulo}}</h4></div> -->
+                        <div class="d-flex justify-content-center text11">
+                          <img class="text-friends fotoTema" src="{{item.tema.fotoLink}}">
+              
+              
+                            </div>
                         <div class="d-flex justify-content-center text11">
                         <p class="text-friends">{{item.texto}}</p>
             
             
                           </div>
 
+
+                          <div class="modal d-flex-justify-content-center align-content-center" tabindex="-1" id="modalPresentes">
+                            <div class="modal-dialog modals modal-dialog-centered">
+                              <div class="modal-content text-friends">
+                                  <div class="d-flex justify-content-center">
+                                  <h5 class="modal-title">Participe desta coleta</h5>
+                                  </div>
+                              
+                                <div class="modal-body">
+                                    <p>Caso queira participar desta coleta clique em "confirmar participação"</p>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn botaoModalCancelar" data-dismiss="modal">Cancelar Participação</button>
+                                  <button type="button" class="btn botaoModalSave" (click)='this.getPostagemById(item.id)' (click)='this.marcada(item.id)' data-dismiss="modal">Confirmar Presença</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
 
                             <div class="d-flex justify-content-center">
                          
@@ -159,12 +184,14 @@
                              
                               <div class="d-flex justify-content-center text11 local">
                                 <p class="text-telocalidade">Endereço:{{item.localidade}}</p>
+                               
                                 </div>
 
                                 
                                  
                                 <div class="d-flex justify-content-center text11"> 
                                      <p class="text-telocalidade">Telefone: {{item.numeroTelefone}}</p>
+                               <img src="  {{item.tema.fotoLink}}" alt="">    
                            </div>  
                     <p class="card-text">
                         <small class="text-muted">
@@ -208,23 +235,7 @@
 
 
 
-            <div class="modal d-flex-justify-content-center align-content-center" tabindex="-1" id="modalPresentes">
-              <div class="modal-dialog modals modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="d-flex justify-content-center">
-                    <h5 class="modal-title">Participe desta coleta</h5>
-                    </div>
-                
-                  <div class="modal-body">
-        
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn botaoModalCancelar" data-dismiss="modal">Cancelar Participação</button>
-                    <button type="button" class="btn botaoModalSave" (click)='this.getPostagemById(item.id)' (click)='this.marcada(item.id)' data-dismiss="modal">Confirmar Presença</button>
-                  </div>
-                </div>
-              </div>
-            </div>
+         
 
 
 
@@ -285,13 +296,14 @@
 <div class="container1">
     <div *ngFor="let item of listaTrends">
   
-        <main class="grid" >
+        <main class="grid">
         <article>
             <img src="{{item.fotoLink}}" alt="">
             <div class="text">
                 <h3>{{item.descricao}}</h3>
                 <!-- <p>lorem ipsum dolor sit am lorem ipsum lorem ipsum</p> -->
-                <button  routerLink='/tema'>Escolha uma coleta </button>
+                
+             <button href="{{item.fotoLink}">Saiba mais</button>
             </div>
         </article>
     </main>
@@ -308,7 +320,14 @@
                 
               <!-- <div class="separacao-boxs"></div>
      -->
+     <script type="text/javascript">
     
+        function maisUm(a,b){
+    1
+
+          return a+b
+        }
+    </script>
         
       <!--Seg-->  
      
